@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
 body {
     background-color: #F9FAFC;
 }
@@ -13,8 +16,13 @@ body {
     color: #E84610;
 }
 
+.pink-a {
+    color: hsl(298, 97%, 49%);
+}
 .thin {
-    font-weight: 300;
+    font-weight: 400;
+    color:  lightseagreen;
+    text-decoration: none;
 }
 
 .light-bg {
@@ -109,6 +117,7 @@ body {
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
+    margin-bottom: 30px;
 }
 
 .btn-signup:hover,
@@ -139,4 +148,55 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+/*NAV BAR*/
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    align-items: center;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.active:hover {
+    text-decoration: underline;
+  }
+
+  .butn:hover {
+    background-color: #14a20a;
+    border-radius: 5px;
+  }
+
+  .bg-white {
+    background-color: #0c0f48!important;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #fff;
+    transition: color .0s ease-in-out,background-color .0s ease-in-out,border-color .0s ease-in-out;
+}
+
+.text-font {
+    font-family: 'Merienda One', 'Brush Script MT', cursive;
+}
+
+.text-font h3 {
+    font-family: 'Merienda One', 'Brush Script MT', cursive;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: white;
+    border: 1px solid #d3053e;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(190, 30, 30, 0.856);
 }

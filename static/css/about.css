@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200&family=Permanent+Marker&family=Play:wght@400;700&family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+/* ABOUT PAGE */
+.about-page {
+    width: 90%;
+    margin: auto;
+}
+
+.about-image {
+    height: 350px;
+    margin: 0 auto;
+    contain: content;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 40px;
+}
+
+.about-page h2 {
+    font-family: 'Kanit', sans-serif;
+    color: #EFB542;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: -13px;
+}
+
+.about-page p {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+#statement-green {
+    color: rgb(99, 34, 45);
+}
