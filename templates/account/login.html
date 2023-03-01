@@ -7,6 +7,15 @@
 
 {% block content %}
 
+
+<style>
+  .square {
+    border: 30px solid transparent;
+    border-image: url('/static/images/border-image.png') 16.66666667% / 1 / 0 stretch;
+  }
+  </style>
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
@@ -18,7 +27,7 @@
         first.{% endblocktrans %}</p>
     </div>
   </div>
-  <div class="row">
+  <div class="row square" >
     <div class="col-md-8 mt-3 offset-md-2">
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
@@ -31,4 +40,5 @@
     </div>
   </div>
 </div>
+
 {% endblock %}

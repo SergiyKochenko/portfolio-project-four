@@ -200,3 +200,9 @@ body {
 .navbar-light .navbar-nav .nav-link {
     color: rgba(190, 30, 30, 0.856);
 }
+
+/* signin  and signup forms*/
+.backgrount-colour {
+    background-color: black;
+  }
+  
