@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
@@ -7,30 +9,66 @@
 {% block content %}
 
 
-</style>
-<section class="backgrount-colour">
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign Up" %}</h3>
+<link rel="stylesheet" href="{% static 'css/signup_form.css' %}">
+<style>
 
-      <p>{% blocktrans %}Welcome back to the <span class="brand">C<span class="red-o">o</span>mp<span class="pink-a">a</span>ny<span
-        class="thin">logo.</span></span></span> Do you already have an account? Then please <a class="link"
-          href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
-      </form>
-    </div>
-  </div>
-</div>
-</section>
+
+</style>
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper body">
+
+		<h1>Create Your account</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form id="signup_form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+					<input class="text" type="text" placeholder="Username" required="" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+					<input class="text email" type="email"  placeholder="Email" required=""  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+					<input class="text" type="password"  placeholder="Password" required=""  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+					<input class="text w3lpass" type="password" placeholder="Confirm Password" required=""  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+          {% endif %}
+					<input type="submit" value="SIGNUP">
+				</form>
+				<p>Don't have an Account? <a href="{{ login_url }}"> Login Now!</a></p>
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p class="footer-company-name">
+        Copyright &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, <h3 class="text-font" style="color:white;"><span class="text-font">C<span class="red-o text-font">o</span>mp<span class="pink-a text-font">a</span>ny<span class="thin text-font">logo</span></span></h3></p>
+		</div>
+		<!-- //copyright -->
+    <ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+</body>
+
+
 {% endblock %}
+
+
+
