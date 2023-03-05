@@ -129,6 +129,10 @@ label {
     font-family: 'Merienda One', 'Brush Script MT', cursive;
 }
 
+.text-font {
+    font-family: 'Merienda One', 'Brush Script MT', cursive;
+}
+
   </style>
 
 
@@ -141,14 +145,14 @@ label {
   </div>
   <div class="login-page" >
     <div class="form">
-      <form class="login-form" method="POST" action="{% url 'account_login' %}">
+      <form class="login-form active" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans "LOGIN" %}</button>
-        <p class="message">Not registered? <a href="{{ signup_url }}">Create an account</a></p>
+        <button class="btn btn-signup right text-font" type="submit">{% trans "LOGIN" %}</button>
+        <p class="message text-font">Not registered? <a class="text-font" href="{{ signup_url }}">Create an account</a></p>
       </form>
     </div>
   </div>

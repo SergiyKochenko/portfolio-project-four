@@ -9,7 +9,11 @@
 <style>
   
 .bg-success {
-    background-color: #6baa8e!important;
+    background-color: #f1f4f3!important;
+}
+
+.text-font {
+    font-family: 'Merienda One', 'Brush Script MT', cursive;
 }
 
   .main-content{
@@ -52,12 +56,12 @@ form{
 }
 </style>
 
-<div  class="row main-content bg-success text-center">
+<div  class="row main-content bg-success text-center text-font">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
       <h3>{% trans "Sign Out" %}</h3>
 
-      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+      <p class="text-font">{% trans 'Are you sure you want to sign out?' %}</p>
     </div>
   </div>
   <div class="row">
@@ -68,7 +72,7 @@ form{
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans 'Sign Out' %}</button>
+        <button class="btn btn-signup right text-font" type="submit">{% trans 'Sign Out' %}</button>
       </form>
     </div>
   </div>

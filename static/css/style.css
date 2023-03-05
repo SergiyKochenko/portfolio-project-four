@@ -190,6 +190,7 @@ body {
 .navbar-light .navbar-nav .show>.nav-link {
     color: #fff;
     transition: color .0s ease-in-out,background-color .0s ease-in-out,border-color .0s ease-in-out;
+    /* justify-content: space-between; */
 }
 
 .text-font {
@@ -214,7 +215,72 @@ body {
     color: rgba(190, 30, 30, 0.856);
 }
 
-/* signin  and signup forms*/
-.backgrount-colour {
-    background-color: black;
-  }
+
+
+
+
+
+
+
+
+
+
+/*  */
+
+body{
+	margin:0;
+	padding:0;
+}
+/* .container{
+	width:90%
+	margin:10px auto;
+} */
+.portfolio-menu{
+	text-align:center;
+}
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+
+
+.portfolio-item .item{
+	/*width:303px;*/
+	float:left;
+	margin-bottom:10px;
+}
+.bg-white {
+    background-color:#0c0f48!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(190, 30, 30, 0.856);
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: #fff;
+    transition: color .0s ease-in-out,background-color .0s ease-in-out,border-color .0s ease-in-out;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: white;
+    border: 1px solid #d3053e;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+}
+

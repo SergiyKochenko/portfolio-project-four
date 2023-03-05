@@ -23,10 +23,10 @@
 
 .about-page h2 {
     font-family: 'Kanit', sans-serif;
-    color: #EFB542;
+    color: #000000;
     font-size: 3em;
-    text-transform: uppercase;
-    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* font-weight: 600; */
     margin-top: -13px;
 }
 

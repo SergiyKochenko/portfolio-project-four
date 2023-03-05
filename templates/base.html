@@ -5,7 +5,7 @@
 <html class="h-100">
 
 <head>
-    <title>Photo Studio</title>
+    <title>Studio</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -33,8 +33,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
-
+            <a class="navbar-brand"><span class="brand text-font" style="color:white;">C<span class="red-o text-font">o</span>mp<span class="pink-a text-font">a</span>ny<span class="thin text-font">logo</span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -75,6 +74,8 @@
                         <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" href="{% url 'account_logout' %}">Logout</a>
                     </li>
 
+<a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
+                    
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" href="{% url 'account_signup' %}">Register</a>
