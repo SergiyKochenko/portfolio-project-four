@@ -75,7 +75,7 @@
                     </li>
 
 <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
-                    
+                 
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" href="{% url 'account_signup' %}">Register</a>
