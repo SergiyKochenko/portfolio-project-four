@@ -38,3 +38,9 @@
 #statement-green {
     color: rgb(99, 34, 45);
 }
+
+#background {
+    padding: 10em 0;
+    margin-bottom: 0;
+    background: url(/static/images/fish.jpg) center center / cover no-repeat fixed;
+}

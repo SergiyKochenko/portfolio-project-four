@@ -165,8 +165,9 @@ body {
 /*NAV BAR*/
 .navbar-collapse {
     flex-basis: 100%;
-    flex-grow: 0;
+    flex-grow: 1;
     align-items: center;
+ 
 }
 
 .active {
