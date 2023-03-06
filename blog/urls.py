@@ -1,6 +1,13 @@
 from . import views
 from django.urls import path
-
+# ================
+from django.contrib import admin
+admin.site.site_header = 'Blog site Administration'
+from django.contrib import admin
+admin.site.site_title = 'Blog Site'
+from django.contrib import admin
+admin.site.index_title= 'Our Admin Site'
+# ==================
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('about/', views.about_page, name='about'),
