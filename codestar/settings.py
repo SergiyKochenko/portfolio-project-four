@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'crispy_forms',
     'allauth',
-    'active_link',
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
