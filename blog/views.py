@@ -8,6 +8,8 @@ from .forms import CommentForm
 
 
 
+
+
 def about_page(request):
     """
     This view renders to the user the about page.
