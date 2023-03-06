@@ -5,7 +5,7 @@
 #background {
 	padding: 10em 0;
 	margin-bottom: 0;
-	background: url('/static/images/background.jpg') center center / cover no-repeat fixed;
+	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678100381/static/images/fish.376333e24643.jpg') center center / cover no-repeat fixed;
 }
 
 .i-in {
