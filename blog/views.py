@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, CreatePostForm
 
 
 
@@ -15,6 +15,51 @@ def about_page(request):
     This view renders to the user the about page.
     """
     return render(request, 'about.html')
+
+def usersblog_page(request):
+    """
+    This view renders to the user the about page.
+    """
+    posts = Post.objects.all()
+    return render(request, 'usersblog.html', {'posts':posts})
+
+def create_post(request):
+    if request.method == 'POST':
+        form = CreatePostForm(request.POST, request.FILES)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.author = request.user
+            instance.save()
+            return redirect('usersblog')
+    else:
+        form = CreatePostForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'create-post.html', context)
+
+
+
+def usersblog_detail(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    comments = post.comments.filter(approved=True)
+    new_comment = None
+    comment_form = CommentForm(data=request.POST)
+    if request.method == 'POST':
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.post = post
+            new_comment.save()
+        else:
+            comment_form = CommentForm()
+    context = {
+        'post': post,
+        'new_comment': new_comment,
+        'comment_form': comment_form,
+    }
+
+    return render(request, 'usersblog_detail.html', context)
+
 
 def pricing_page(request):
     """
@@ -114,3 +159,5 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
