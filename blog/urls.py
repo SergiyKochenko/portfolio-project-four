@@ -19,4 +19,6 @@ urlpatterns = [
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('<str:slug>', views.usersblog_detail, name='usersblog_detail'),
+    path('post-edit/<str:slug>/',views.edit_post, name='blog-edit'),
+    # path('post-delete/<str:slug>/', view.delete_post, name='blog-delete')
 ]

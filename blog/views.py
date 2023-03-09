@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm, CreatePostForm
+from .forms import CommentForm, CreatePostForm, PostUpdateForm
 
 
 
@@ -16,12 +16,16 @@ def about_page(request):
     """
     return render(request, 'about.html')
 
+
+@login_required()
 def usersblog_page(request):
     """
     This view renders to the user the about page.
     """
     posts = Post.objects.all()
     return render(request, 'usersblog.html', {'posts':posts})
+
+    
 
 def create_post(request):
     if request.method == 'POST':
@@ -59,6 +63,35 @@ def usersblog_detail(request, slug):
     }
 
     return render(request, 'usersblog_detail.html', context)
+
+
+def edit_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    if request.method == 'POST':
+        form = PostUpdateForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('usersblog_detail', slug=post.slug)
+    else:
+        form = PostUpdateForm(instance=post)
+    context = {
+        'post': post,
+        'form': form
+    }
+    return render(request, 'edit_post.html', context)
+
+
+# def delete_post(request, slug):
+#     post = get_object_or_404(Post, slug=slug, author=request.user)
+#     if request.method == 'POST':
+#         post.delete()
+#         messages.info(request, "The post have been deleted")
+#         return redirect('usersblog')
+#     context = {
+#         'post': post,
+#     }
+#     return render(request, 'delete_post.html', context)
+
 
 
 def pricing_page(request):

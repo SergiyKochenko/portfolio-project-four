@@ -13,3 +13,8 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+
+class PostUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ('title', 'excerpt', 'content', 'featured_image')
