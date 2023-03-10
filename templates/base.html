@@ -45,47 +45,53 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/usersblog/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'usersblog' %}">User's Blog</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/usersblog/' %}active{% endif %}" aria-current="page" href="{% url 'usersblog' %}">User's Blog</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/gallery/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex {% if request.path == '/gallery/' %}active{% endif %}" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/pricing/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/pricing/' %}active{% endif %}" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/contact/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'contact' %}">Contact</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/contact/' %}active{% endif %}" aria-current="page" href="{% url 'contact' %}">Contact</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'about' %}">About</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex" aria-current="page" href="{%url 'booknow' %}">Book Now</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex {% if request.path == '/about/' %}active{% endif %}" aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
 
                     
 
                     {% if user.is_authenticated %}
 
-
+                    <li class="nav-item">
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/account_logout/' %}active{% endif %}" href="{% url 'bookings' %}">My bookings</a>
+                    </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex {% if request.path == '/account_logout/' %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
 
 <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
                  
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" href="{% url 'account_signup' %}">Register</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/account_signup/' %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/account_login/' %}active{% endif %} butn text-font" href="{% url 'account_login' %}">Login</a>
+                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/account_login/' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
                     </li>
 
 
