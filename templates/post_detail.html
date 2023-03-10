@@ -13,7 +13,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -62,6 +62,7 @@
             </div>
         </div>
     </div>
+    <a href="{% url 'usersblog' %}" class="btn btn-dark">Go back</a>
     <div class="row">
         <div class="col">
             <hr>

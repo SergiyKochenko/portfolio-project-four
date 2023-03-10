@@ -12,6 +12,7 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                     <input type="submit" class="btn btn-success">
+                    <a href="{% url 'usersblog' %}" class="btn btn-dark">Go back</a>
                 </form>  
             </div>
         </div>
