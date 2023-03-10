@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, CreatePostForm, PostUpdateForm
+from django.contrib import messages
 
 
 
@@ -81,16 +82,16 @@ def edit_post(request, slug):
     return render(request, 'edit_post.html', context)
 
 
-# def delete_post(request, slug):
-#     post = get_object_or_404(Post, slug=slug, author=request.user)
-#     if request.method == 'POST':
-#         post.delete()
-#         messages.info(request, "The post have been deleted")
-#         return redirect('usersblog')
-#     context = {
-#         'post': post,
-#     }
-#     return render(request, 'delete_post.html', context)
+def delete_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    if request.method == 'POST':
+        post.delete()
+        messages.info(request, "The post have been deleted")
+        return redirect('usersblog')
+    context = {
+        'post': post,
+    }
+    return render(request, 'delete_post.html', context)
 
 
 

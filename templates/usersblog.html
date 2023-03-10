@@ -47,12 +47,11 @@
      <div>
         {% if post.author == request.user %}
         <a href="{% url 'blog-edit' post.slug %}"><button type="button" class="btn btn-outline-primary">  &Edit Post&  </button></a>
-        <!-- <a href="#"><button type="button" class="btn btn-outline-danger">Delete Post</button> -->
-        </a>
+        <a href="{% url 'blog-delete' post.slug %}"><button type="button" class="btn btn-outline-danger">Delete Post</button></a>
         {% endif %}
     </div>
+  
     
-     
     <!-- =================== -->
 
 
