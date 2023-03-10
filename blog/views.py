@@ -72,7 +72,8 @@ def edit_post(request, slug):
         form = PostUpdateForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
-            return redirect('usersblog_detail', slug=post.slug)
+            messages.info(request, "The post have been updated")
+            return redirect('usersblog')
     else:
         form = PostUpdateForm(instance=post)
     context = {

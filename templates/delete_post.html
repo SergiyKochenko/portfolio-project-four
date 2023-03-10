@@ -15,7 +15,7 @@
                 <form action="{% url 'blog-delete' post.slug %}" method="POST" name="confirm" class="nt-5">
                     {% csrf_token %}
                     <div class="d-flex flex justify-content-between logout-buttons">
-                        <a href="{% url 'usersblog_detail' post.slug %}" class="btn btn-dark">Go back</a>
+                        <a href="{% url 'usersblog' %}" class="btn btn-dark">Go back</a>
                         <input type="submit" class="btm btn-danger" value="Delete" name="delete">
                     </div>
                 </form>

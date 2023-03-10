@@ -11,7 +11,8 @@
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <input type="submit" class="btn btn-success" value="Update">                    
+                    <input type="submit" class="btn btn-success" value="Update">
+                    <a href="{% url 'usersblog' %}" class="btn btn-dark">Go back</a>                   
                 </form>
             </div>
         </div>
