@@ -3,25 +3,26 @@
 {% block content %}
 
 <!-- The page to delete a booking -->
-
+<link rel="stylesheet" href="{% static 'css/delete-booking-page.css' %}">
+<section class="delete-booking-page">
 <div class="d-flex">
     <div class=" text-center m-auto p-5">
         <!-- <div class="col-md-8 mt-3 text-center"> -->
-        <h2 class="bookings-title mb-4">Delete your Booking</h2>
+        <h2 class="bookings-title mb-4 text-font">Delete your Booking</h2>
 
 
-        <form method="POST">
+        <form method="POST" class="delete-booking-contain text-white">
         {% csrf_token %}
 
         <div class="delete-contain align-items-center">
 
             <div class="delete-block pb-3 delete-block text-center">
-                <p>You are about to delete your booking.</p>
+                <p class="text-font">You are about to delete your booking</p>
 
-                <button class="delete-btn btn btn-outline-warning mb-2 text-danger" type="submit"> <i
+                <button class="delete-btn btn btn-outline-warning mb-2 text-danger text-font" type="submit"> <i
                         class="fa-solid fa-trash-can text-danger"></i> Yes,
                     delete booking</button>
-                <a class="btn btn-outline-warning mx-auto mb-2" href="{% url 'bookings' %}" role="button">Back to my bookings
+                <a class="btn btn-outline-warning mx-auto mb-2 text-font" href="{% url 'bookings' %}" role="button">Back to my bookings
                 </a>
             </div>
 
@@ -31,5 +32,6 @@
     </div>
 
 </div>
+</section>
 
 {% endblock content %}

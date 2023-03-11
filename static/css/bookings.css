@@ -1,0 +1,22 @@
+/*** Booknow page ***/
+
+.booking-page {
+    background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678533204/DSC_0397_ddaio8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-decoration: none;
+}
+
+.card {
+    width: 20rem;
+    display: inline-block;
+    align-items: center;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}

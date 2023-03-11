@@ -7,19 +7,22 @@
 
 <!-- The page to edit a booking -->
 
+
+<link rel="stylesheet" href="{% static 'css/change-booking.css' %}">
+<section class="change-booking-page">
 <div class="container mt-5 pt-5">
     <div class="row">
         <div class="card-change mx-auto">
-            <h3 class="text-center mb-5 mt-5">Edit your Booking</h3> 
-            <div class="change-form p-3">
+            <h1 class="text-center text-white mb-5 text-font">Edit your Booking</h1> 
+            <div class="change-form p-3 change-booking-contain text-white">
                 <form method="POST" >
                     {% csrf_token %}
                     {{ form|crispy }}
-
-                    <button class="btn btn-outline-warning mt-3" type="submit">Done</button>
+                    <button class="btn btn-outline-warning mt-3 text-font" type="submit">Done</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+</section>
 {% endblock content %}

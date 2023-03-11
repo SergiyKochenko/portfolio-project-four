@@ -1,0 +1,14 @@
+.booknow-page {
+    background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678538776/DSC_0578_igqlls.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.booknow-contain {
+    margin: 0 auto;
+    background-color: #312E38;
+    opacity: 0.9;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+}

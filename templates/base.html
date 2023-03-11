@@ -42,34 +42,32 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 
-
-
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/usersblog/' %}active{% endif %}" aria-current="page" href="{% url 'usersblog' %}">User's Blog</a>
+                        <a class="nav-link {% if request.path == '/usersblog/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'usersblog' %}">User's Blog</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex {% if request.path == '/gallery/' %}active{% endif %}" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
+                        <a class="nav-link {% if request.path == '/gallery/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/pricing/' %}active{% endif %}" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
+                        <a class="nav-link {% if request.path == '/pricing/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/contact/' %}active{% endif %}" aria-current="page" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link {% if request.path == '/contact/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'contact' %}">Contact</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex" aria-current="page" href="{%url 'booknow' %}">Book Now</a>
+                        <a class="nav-link {% if request.path == '/booknow/' %}active{% endif %} butn text-font" aria-current="page" href="{%url 'booknow' %}">Book Now</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex {% if request.path == '/about/' %}active{% endif %}" aria-current="page" href="{% url 'about' %}">About</a>
+                        <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
 
                     
@@ -77,21 +75,21 @@
                     {% if user.is_authenticated %}
 
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/account_logout/' %}active{% endif %}" href="{% url 'bookings' %}">My bookings</a>
+                        <a class="nav-link {% if request.path == '/bookings/' %}active{% endif %} butn text-font" href="{% url 'bookings' %}">My bookings</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex {% if request.path == '/account_logout/' %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" href="{% url 'account_logout' %}">Logout</a>
                     </li>
 
-<a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
+                    <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
                  
                     {% else %}
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/account_signup/' %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning book-now d-inline-flex p-2 d-none d-lg-flex{% if request.path == '/account_login/' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == '/account_login/' %}active{% endif %} butn text-font" href="{% url 'account_login' %}">Login</a>
                     </li>
 
 
@@ -141,20 +139,20 @@
 
             
             <p class="footer-links">
-                <a href="{% url 'home' %}" class="link-1">Home</a>
+                <a href="{% url 'home' %}" class="link-1 text-font">Home</a>
                 
-                <a href="#">Blog</a>
+                <a href="#" class="text-font">Blog</a>
             
-                <a href="{% url 'pricing' %}">Pricing</a>
+                <a href="{% url 'pricing' %}" class="text-font">Pricing</a>
             
-                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'about' %}" class="text-font">About</a>
                 
-                <a href="#">Faq</a>
+                <a href="#" class="text-font">Faq</a>
                 
-                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'contact' %}" class="text-font">Contact</a>
             </p>
 
-            <p class="footer-company-name">
+            <p class="footer-company-name text-font">
                 Copyright &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Company Name. All rights reserved.</p>
         </div>
 
@@ -164,7 +162,7 @@
                 <a>
                     <i class="fas fa-map-marker-alt"></i>
                 </a>
-                <a href="https://goo.gl/maps/taq2R6KVoNtFX13A7" target="_blank"><p><span>Tralee, Kerry College, Monavally,</span> Co. Kerry, Ireland, V92 PW50</p></a>
+                <a href="https://goo.gl/maps/taq2R6KVoNtFX13A7" target="_blank"><p class="text-font"><span class="text-font">Tralee, Kerry College, Monavally,</span> Co. Kerry, Ireland, V92 PW50</p></a>
             </div>
 
             <div>
@@ -172,7 +170,7 @@
                     <a>
                         <i aria-hidden="true" class="fas fa-phone-alt"></i>
                     </a>
-            <a class="thin" href="tel:+3530667149600">(066)-714-9600</a>
+            <a class="thin text-font" href="tel:+3530667149600">(066)-714-9600</a>
                 </a>
             </div>
 
@@ -180,15 +178,15 @@
                 <a>
                     <i class="fa fa-envelope"></i>
                 </a>
-                <a class="thin" href="mailto:sergiykochenko@gmail.com">support@company.com</a>
+                <a class="thin text-font" href="mailto:sergiykochenko@gmail.com">support@company.com</a>
             </div>
 
         </div>
 
         <div class="footer-right">
 
-            <p class="footer-company-about">
-                <span>About the company</span>
+            <p class="footer-company-about text-font">
+                <span class="text-font">About the company</span>
                 Shutter Fever Photography is a professional, full service photography studio based in Charlestown, Co Mayo.
             </p>
 

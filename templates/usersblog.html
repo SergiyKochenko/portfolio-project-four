@@ -4,10 +4,52 @@
 {% load static %}
 
 {% block content %}
-<div class="d-grid gap-2 col-6 col-md-4 mx-auto row">
+
+
+<style>
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .container img {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .container .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #f1f1f16e;
+        color: black;
+        font-size: 16px;
+        padding: 16px 30px;
+        border: solid 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .container .btn:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #background {
+    padding: 10em 0;
+    margin-bottom: 0;
+    background: url(/static/images/fish.jpg) center center / cover no-repeat fixed;
+}
+    </style>
+
+<div class="container" id="background">
 <a class="button-wrapper col-md-4" href="{% url 'create-post' %}" >
     <span>
-        <button type="button" class="btn btn-success">Create Post</button>
+        <button type="button" class="btn btn-success text-font btn-custom">Create Post</button>
     </span>
 </a>
 </div>
@@ -33,12 +75,12 @@
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <h2 class="card-title text-font">{{ post.title }}</h2>
+                                <p class="card-text text-font">{{ post.excerpt }}</p>
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                            <p class="card-text text-muted h6 text-font">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
 
 
@@ -46,8 +88,8 @@
    
      <div>
         {% if post.author == request.user %}
-        <a href="{% url 'blog-edit' post.slug %}"><button type="button" class="btn btn-outline-primary">Edit Post</button></a>
-        <a href="{% url 'blog-delete' post.slug %}"><button type="button" class="btn btn-outline-danger">Delete Post</button></a>
+        <a href="{% url 'blog-edit' post.slug %}"><button type="button" class="btn btn-outline-primary text-font">Edit Post</button></a>
+        <a href="{% url 'blog-delete' post.slug %}"><button type="button" class="btn btn-outline-danger text-font">Delete Post</button></a>
         {% endif %}
     </div>
   
