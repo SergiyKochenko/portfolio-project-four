@@ -1,9 +1,17 @@
-.booknow-page {
+/* .booknow-page {
     background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678617023/DSC_1033_kcoo6m.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+} */
+
+
+#background {
+	padding: 10em 0;
+	margin-bottom: 0;
+	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678617023/DSC_1033_kcoo6m.jpg') center center / cover no-repeat fixed;
 }
+
 
 .booknow-contain {
     margin: 0 auto;

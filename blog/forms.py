@@ -9,9 +9,7 @@ from django.core.validators import MinValueValidator
 import datetime
 
 
-# A function that does not allow you to select dates
-#  earlier than today's date. Source: github manual
-# code https://gist.github.com/stasyao/99376eb0cf0ad3599f9737c421b5210e#part_4
+
 
 
 def get_min_date():

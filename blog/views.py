@@ -111,11 +111,7 @@ def contact_page(request):
     """
     return render(request, 'contact.html')
 
-def gallery_page(request):
-    """
-    This view renders to the user the about page.
-    """
-    return render(request, 'gallery.html')
+
 
 def contact_page(request):
     """
@@ -214,7 +210,7 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
-    paginate_by = 2
+    paginate_by = 6
 
 
 class PostDetail(View):

@@ -11,7 +11,7 @@ admin.site.index_title= 'Admin Site'
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
 
-    path('services/', views.services, name="services"),
+
     path('booknow/', views.booknow, name="booknow"),
     path('bookings/', views.bookings, name='bookings'),
     path('change/<int:booking_id>/', views.change_booking, name='change_booking'),
@@ -22,7 +22,6 @@ urlpatterns = [
     path('usersblog/', views.usersblog_page, name='usersblog'),
     path('create-post/', views.create_post, name='create-post'),
     path('pricing/', views.pricing_page, name='pricing'),
-    path('gallery/', views.gallery_page, name='gallery'),
     path('contact/', views.contact_page, name='contact'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('post-edit/<str:slug>/',views.edit_post, name='blog-edit'),

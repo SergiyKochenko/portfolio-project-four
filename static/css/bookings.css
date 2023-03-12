@@ -1,12 +1,18 @@
 /*** Booknow page ***/
 
 .booking-page {
-    background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678573937/DSC_0904_fwqrih.jpg");
+    background: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678573937/DSC_0904_fwqrih.jpg") center center / cover no-repeat fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     text-decoration: none;
 }
+/* 
+#background {
+	padding: 10em 0;
+	margin-bottom: 0;
+	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678573937/DSC_0904_fwqrih.jpg') center center / cover no-repeat fixed;
+} */
 
 .card {
     width: 20rem;
@@ -19,4 +25,8 @@
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
+}
+
+.pt-5 {
+    margin-bottom: 30px;
 }

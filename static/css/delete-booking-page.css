@@ -1,5 +1,5 @@
 .delete-booking-page {
-    background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678539342/DSC_1016_gryqzg.jpg");
+    background: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678539342/DSC_1016_gryqzg.jpg") center center / cover no-repeat fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
