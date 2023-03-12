@@ -28,11 +28,32 @@
     height: 100%;
     text-decoration: none;
 }
+
+.gradient-custom-3 {
+/* fallback for old browsers */
+background: #84fab0;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+.gradient-custom-4 {
+/* fallback for old browsers */
+background: #84fab0;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
 </style>
 
 
 <!-- ============================================================================== -->
-<section class="signup-bg-page">
+<section class="signup-bg-page vh-100 bg-imagevh-100 bg-image">
 
     
       <div class="row d-flex p-5">
@@ -44,14 +65,14 @@
 			  <div class="card rouded m-2 shadow-sm border-0 form-card signup-contain">
 				<div class="card-body p-3 blog-card tex-white form-card-body">
               <form class="create-post-form text-white" method="post" action="{% url 'account_signup' %}">
+
 				{% csrf_token %}
 				{{ form.as_p }}
 				{% if redirect_field_value %}
-               
 
                 <div class="d-flex justify-content-center">
 					{% endif %}
-					<input class="text-font" type="submit" value="SIGNUP">
+					<input class="text-font btn btn-success btn-block btn-lg gradient-custom-4 text-body" type="submit" value="SIGNUP">
                 </div>
 				
               </form>
