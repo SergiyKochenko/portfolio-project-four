@@ -13,3 +13,10 @@
     border: 1px solid #6c757d;
     border-radius: 5px;
 }
+
+.delete-card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}

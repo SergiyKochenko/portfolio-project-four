@@ -25,11 +25,10 @@
                 </form>
             </div>
             {% else %}
-            <div class="booknow-block d-flex">
-
+            <div class="booknow-block booknow-contain d-flex text-white">
                 <div class="p-3  text-left">
-                    <p >To make a reservation, please <a href="/accounts/login/">login</a></p>
-                    <p>If you have not created an account yet, then please <a href="/accounts/signup/">sign up</a></p>
+                    <p class="text-font">To make a reservation, please <a class="btn btn-outline-warning mt-3 text-font" href="/accounts/login/">login</a></p>
+                    <p class="text-font">If you have not created an account yet, then please <a class="btn btn-outline-warning mt-3 text-font" href="/accounts/signup/">sign up</a></p>
                 </div>
             </div>
             {% endif %}

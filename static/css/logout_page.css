@@ -1,0 +1,15 @@
+.logout-bg-page {
+    background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678562753/DSC_1045_lo9gt0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-decoration: none;
+}
+
+.logout-contain {
+    margin: 0 auto;
+    background-color: #312E38;
+    opacity: 0.9;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+}

@@ -13,59 +13,64 @@
 <style>
 
 
+.signup-contain {
+    margin: 0 auto;
+    background-color: #312E38;
+    opacity: 0.9;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+}
+
+.signup-bg-page {
+    background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678581721/DSC_0988_drmjzk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-decoration: none;
+}
 </style>
 
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
-<body>
-	<!-- main -->
-	<div class="main-w3layouts wrapper body">
+<!-- ============================================================================== -->
+<section class="signup-bg-page">
 
-		<h1>Create Your account</h1>
-		<div class="main-agileinfo">
-			<div class="agileits-top">
-				<form id="signup_form" method="post" action="{% url 'account_signup' %}">
-          {% csrf_token %}
-          {{ form.as_p }}
-          {% if redirect_field_value %}
-					<input class="text" type="text" placeholder="Username" required="" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-					<input class="text email" type="email"  placeholder="Email" required=""  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-					<input class="text" type="password"  placeholder="Password" required=""  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-					<input class="text w3lpass" type="password" placeholder="Confirm Password" required=""  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-					<div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>I Agree To The Terms & Conditions</span>
-						</label>
-						<div class="clear"> </div>
-					</div>
-          {% endif %}
-					<input type="submit" value="SIGNUP">
-				</form>
-				<p>Don't have an Account? <a href="{{ login_url }}"> Login Now!</a></p>
-			</div>
-		</div>
-		<!-- copyright -->
-		<div class="colorlibcopy-agile">
-			<p class="footer-company-name">
-        Copyright &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, <h3 class="text-font" style="color:white;"><span class="text-font">C<span class="red-o text-font">o</span>mp<span class="pink-a text-font">a</span>ny<span class="thin text-font">logo</span></span></h3></p>
-		</div>
-		<!-- //copyright -->
-    <ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
+    
+      <div class="row d-flex p-5">
+        
+         
+            <div class="text-center m-auto p-5 col-sm-8 col-nd-6 my-3 offset-sm-2 offset-md-3 form-container">
+		
+              <h1 class="text-white bookings-title mb-4 text-font">Create an account</h1>
+			  <div class="card rouded m-2 shadow-sm border-0 form-card signup-contain">
+				<div class="card-body p-3 blog-card tex-white form-card-body">
+              <form class="create-post-form text-white" method="post" action="{% url 'account_signup' %}">
+				{% csrf_token %}
+				{{ form.as_p }}
+				{% if redirect_field_value %}
+               
 
-</body>
+                <div class="d-flex justify-content-center">
+					{% endif %}
+					<input class="text-font" type="submit" value="SIGNUP">
+                </div>
+				
+              </form>
+			  <p class="text-center mt-5 mb-5 text-white text-font">Have already an account? <a href="{{ login_url }}"
+				class="text-font btn btn-outline-warning">Login here</a></p>
+			  
+				</div>
+
+
+			  </div>
+
+			 
+            </div>
+          
+			
+      </div>
+    
+
+</section>
 
 
 {% endblock %}

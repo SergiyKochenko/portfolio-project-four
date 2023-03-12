@@ -13,19 +13,16 @@
 
         <form method="POST" class="delete-booking-contain text-white">
         {% csrf_token %}
-
-        <div class="delete-contain align-items-center">
-
+        <div class="delete-card-body align-items-center">
             <div class="delete-block pb-3 delete-block text-center">
                 <p class="text-font">You are about to delete your booking</p>
 
                 <button class="delete-btn btn btn-outline-warning mb-2 text-danger text-font" type="submit"> <i
                         class="fa-solid fa-trash-can text-danger"></i> Yes,
                     delete booking</button>
-                <a class="btn btn-outline-warning mx-auto mb-2 text-font" href="{% url 'bookings' %}" role="button">Back to my bookings
-                </a>
+                <a class="btn btn-outline-warning mx-auto mb-2 text-font" href="{% url 'bookings' %}" role="button">Back to my bookings</a>
             </div>
-
+            
         </div>
 
         </form>

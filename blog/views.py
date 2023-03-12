@@ -30,7 +30,7 @@ def usersblog_page(request):
     return render(request, 'usersblog.html', {'posts':posts})
 
     
-
+# @login_required()
 def create_post(request):
     if request.method == 'POST':
         form = CreatePostForm(request.POST, request.FILES)
