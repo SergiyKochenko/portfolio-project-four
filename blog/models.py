@@ -6,6 +6,7 @@ from django.utils.text import slugify
 # =========================
 from enum import unique
 from django.core.validators import RegexValidator
+from datetime import timedelta
 # =======================
 
 

@@ -47,6 +47,10 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'about' %}">About</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link {% if request.path == '/usersblog/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'usersblog' %}">User's Blog</a>
                     </li>
 
@@ -60,20 +64,16 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/booknow/' %}active{% endif %} butn text-font" aria-current="page" href="{%url 'booknow' %}">Book Now</a>
                     </li> 
-    
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/bookings/' %}active{% endif %} butn text-font" href="{% url 'bookings' %}">My bookings</a>
-                    </li>
 
                     </li>                    
-                    
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'about' %}">About</a>
-                    </li>
 
                     
 
                     {% if user.is_authenticated %}
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/bookings/' %}active{% endif %} butn text-font" href="{% url 'bookings' %}">My bookings</a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" href="{% url 'account_logout' %}">Logout</a>

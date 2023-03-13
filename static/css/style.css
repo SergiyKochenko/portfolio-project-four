@@ -11,16 +11,16 @@ body {
     font-weight: 700;
     color: #4A4A4F;
 }
-/*alert messages  */
+/* alert messages  */
 .alert {
     display: block;
     margin: 6px;
     border-radius: 3px;
     border: 1px solid rgb(180,180,180);
-    background-color: rgb(49, 197, 44);
+    /* background-color: rgb(49, 197, 44); */
     z-index: 1;
     position: absolute;
-    font-size: xx-large;
+    /* font-size: xx-large; */
 }
 /*  */
 .red-o {
@@ -78,9 +78,11 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 55vh;
     width: 100%;
 }
+
+
 
 .masthead-text {
     background-color: #445261;

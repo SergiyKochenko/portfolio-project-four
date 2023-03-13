@@ -10,7 +10,9 @@ from django.contrib import messages
 
 from .forms import BookingForm
 from .models import Booking
-
+# =====================
+import datetime
+from dateutil import parser
 # ===============================
 
 
@@ -137,6 +139,15 @@ def booknow(request):
     """
     if request.method == 'POST':
         form = BookingForm(request.POST)
+# -------------------------------------------------------------------------------
+
+        date = datetime.datetime.strptime(str(request.POST['date']), '%Y-%m-%d')
+        time = datetime.datetime.strptime(str(request.POST['time']), '%H:%M')
+        time = request.POST['time']
+        if Booking.objects.filter(date=date, time=time).exists():
+            messages.error(request, "The time is already booked, please select another time")
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+# --------------------------------------------------------------------------------
         if form.is_valid():
             booking_form = form.save(commit=False)
             booking_form.user = request.user
@@ -172,6 +183,14 @@ def change_booking(request, booking_id):
 
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=record)
+# --------------------------------------------------------
+        date = datetime.datetime.strptime(str(request.POST['date']), '%Y-%m-%d')
+        time = datetime.datetime.strptime(str(request.POST['time']), '%H:%M')
+        time = request.POST['time']
+        if Booking.objects.filter(date=date, time=time).exists():
+            messages.error(request, "The time is already booked, please select another time")
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+# --------------------------------------------------------
         if form.is_valid():
             form.save()
             messages.success(request, 'You succesfully updated your booking.')
