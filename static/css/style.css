@@ -19,7 +19,8 @@ body {
     border: 1px solid rgb(180,180,180);
     background-color: rgb(49, 197, 44); */
     z-index: 1;
-    /* position: absolute;
+    position: absolute;
+    /* margin: 0px auto 0px 189px;
     font-size: xx-large; */
 }
 /*  */
