@@ -6,9 +6,9 @@
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'css/booknow-page.css' %}">
-<div id="background"  width="100%" height="auto">
+<div class="p-5" id="background"  width="100%" height="auto">
 <div class="d-flex justify-content-center">
-    <div class="text-center p-5">
+    <div class="text-center pt-3">
         <h2 class="bookings-title mb-4 text-font text-white">Book your appointment</h2>
         {% if user.is_authenticated %}
         <div class="booknow-contain text-left p-3 text-white">

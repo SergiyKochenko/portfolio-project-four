@@ -13,14 +13,14 @@ body {
 }
 /* alert messages  */
 .alert {
-    display: block;
+    /* display: block;
     margin: 6px;
     border-radius: 3px;
     border: 1px solid rgb(180,180,180);
-    /* background-color: rgb(49, 197, 44); */
+    background-color: rgb(49, 197, 44); */
     z-index: 1;
-    position: absolute;
-    /* font-size: xx-large; */
+    /* position: absolute;
+    font-size: xx-large; */
 }
 /*  */
 .red-o {
