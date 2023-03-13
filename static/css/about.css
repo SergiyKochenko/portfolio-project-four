@@ -42,5 +42,5 @@
 #background {
     padding: 10em 0;
     margin-bottom: 0;
-    background: url(/static/images/fish.jpg) center center / cover no-repeat fixed;
+    background: url() center center / cover no-repeat fixed;
 }
