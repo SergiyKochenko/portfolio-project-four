@@ -10,6 +10,10 @@ from .models import Booking
 import datetime
 from dateutil import parser
 
+# =======================
+from django.core.paginator import Paginator
+# ======================
+
 
 def about_page(request):
     """
@@ -18,14 +22,27 @@ def about_page(request):
     return render(request, 'about.html')
 
 
+# @login_required()
+# def usersblog_page(request):
+#     """
+#     This view renders to the user the about page.
+#     """
+#     posts = Post.objects.all()
+#     return render(request, 'usersblog.html', {'posts':posts})
+
+# ======================================
 @login_required()
 def usersblog_page(request):
-    """
-    This view renders to the user the about page.
-    """
     posts = Post.objects.all()
-    return render(request, 'usersblog.html', {'posts':posts})
-
+    paginator = Paginator(posts, 2)
+    page = request.GET.get('page')
+    page_obj = paginator.get_page(page)
+    context = {
+        'posts': posts,
+        'page_obj': page_obj
+    }
+    return render(request, 'usersblog.html', context)
+# ====================================================
     
 # @login_required()
 def create_post(request):
@@ -202,11 +219,19 @@ def delete_booking(request, booking_id):
     return render(request, 'delete-booking.html', context)
 
 
+# class PostList(generic.ListView):
+#     model = Post
+#     queryset = Post.objects.filter(status=1).order_by("-created_on")
+#     template_name = "index.html"
+#     paginate_by = 4
+
+# ============================================================
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
-    template_name = "index.html"
-    paginate_by = 6
+    template_name = "usersblog.html"
+    paginate_by = 4
+# ===========================================================
 
 
 class PostDetail(View):

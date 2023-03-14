@@ -60,4 +60,4 @@ As a Site Administrator I would like to be able to create, view, edit and delete
 [Back to the top](#table-of-contents)
 
 
-MADE FRMATING HTML WITH: https://www.freeformatter.com/html-formatter.html#before-output
+MADE FORMATING HTML WITH: https://www.freeformatter.com/html-formatter.html#before-output
