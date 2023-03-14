@@ -1,9 +1,8 @@
 from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
-
-# ===================
 from .models import Service, Booking
+
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
@@ -30,7 +29,6 @@ class BookingAdmin(admin.ModelAdmin):
                    'name',
                    'date',
                    'phone')
-# ==================
 
 
 @admin.register(Post)

@@ -5,15 +5,10 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, CreatePostForm, PostUpdateForm
 from django.contrib import messages
-
-# =================================
-
 from .forms import BookingForm
 from .models import Booking
-# =====================
 import datetime
 from dateutil import parser
-# ===============================
 
 
 def about_page(request):
@@ -47,7 +42,6 @@ def create_post(request):
         'form': form
     }
     return render(request, 'create-post.html', context)
-
 
 
 def usersblog_detail(request, slug):
@@ -100,7 +94,6 @@ def delete_post(request, slug):
     return render(request, 'delete_post.html', context)
 
 
-
 def pricing_page(request):
     """
     This view renders to the user the about page.
@@ -114,16 +107,12 @@ def contact_page(request):
     return render(request, 'contact.html')
 
 
-
 def contact_page(request):
     """
     This view renders to the user the about page.
     """
     return render(request, 'contact.html')
 
-
-
-# ==============================================================================
 
 def services(request):
     """
@@ -139,15 +128,12 @@ def booknow(request):
     """
     if request.method == 'POST':
         form = BookingForm(request.POST)
-# -------------------------------------------------------------------------------
-
         date = datetime.datetime.strptime(str(request.POST['date']), '%Y-%m-%d')
         time = datetime.datetime.strptime(str(request.POST['time']), '%H:%M')
         time = request.POST['time']
         if Booking.objects.filter(date=date, time=time).exists():
             messages.error(request, "The time is already booked, please select another time")
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-# --------------------------------------------------------------------------------
         if form.is_valid():
             booking_form = form.save(commit=False)
             booking_form.user = request.user
@@ -183,14 +169,12 @@ def change_booking(request, booking_id):
 
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=record)
-# --------------------------------------------------------
         date = datetime.datetime.strptime(str(request.POST['date']), '%Y-%m-%d')
         time = datetime.datetime.strptime(str(request.POST['time']), '%H:%M')
         time = request.POST['time']
         if Booking.objects.filter(date=date, time=time).exists():
             messages.error(request, "The time is already booked, please select another time")
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-# --------------------------------------------------------
         if form.is_valid():
             form.save()
             messages.success(request, 'You succesfully updated your booking.')
@@ -206,23 +190,16 @@ def delete_booking(request, booking_id):
     """
     Function enables user to delete a booking record
     """
-
     record = get_object_or_404(Booking, id=booking_id)
     if request.method == "POST":
         form = BookingForm(request.POST, instance=record)
         if record.delete():
             messages.success(request, 'Your booking has been deleted.')
             return redirect('bookings')
-
     form = BookingForm(instance=record)
     context = {
         'form': form, 'record': record}
     return render(request, 'delete-booking.html', context)
-
-
-# =====================================================================
-
-
 
 
 class PostList(generic.ListView):
@@ -241,7 +218,6 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-
         return render(
             request,
             "post_detail.html",
@@ -253,7 +229,8 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -296,5 +273,3 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-

@@ -83,8 +83,6 @@ body {
     width: 100%;
 }
 
-
-
 .masthead-text {
     background-color: #445261;
     color: white;
@@ -219,7 +217,6 @@ body {
     color: rgba(190, 30, 30, 0.856);
 }
 
-
 .navbar-brand {
     display: inline-block;
     padding-top: 0.3125rem;
@@ -230,11 +227,6 @@ body {
     flex-grow: 1;
     white-space: nowrap;
 }
-
-
-
-
-/*  */
 
 body{
 	margin:0;
@@ -259,7 +251,6 @@ body{
 	-o-transition:all 05s ease;
 	transition:all .5s ease;
 }
-
 
 .portfolio-item .item{
 	/*width:303px;*/
@@ -292,4 +283,3 @@ body{
     border-radius: 0.25rem;
     transition: box-shadow .15s ease-in-out;
 }
-

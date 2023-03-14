@@ -1,15 +1,9 @@
 from .models import Comment
 from django import forms
 from .models import Post
-
-
-# ==============================================================================
 from .models import Booking
 from django.core.validators import MinValueValidator
 import datetime
-
-
-
 
 
 def get_min_date():
@@ -40,14 +34,11 @@ class BookingForm(forms.ModelForm):
         widgets = {'date': DateInput()}
 
 
-
-# ===========================================================================
-
-
 class CreatePostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'excerpt', 'content', 'featured_image')
+
 
 class CommentForm(forms.ModelForm):
     class Meta:
