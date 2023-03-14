@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'crispy_bootstrap5',
-    'datetime',
     'blog',
 ]
 
