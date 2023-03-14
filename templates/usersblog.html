@@ -1,61 +1,50 @@
 {% extends 'base.html' %}
-
-
 {% load static %}
-
 {% block content %}
-
-
 <style>
     .container {
-        position: relative;
-        width: 100%;
-        max-width: 100%;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
     }
-    
     .container img {
-        width: 100%;
-        height: 400px;
+    width: 100%;
+    height: 400px;
     }
-    
     .container .btn {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        background-color: #f1f1f16e;
-        color: black;
-        font-size: 16px;
-        padding: 16px 30px;
-        border: solid 2px;
-        cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f16e;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: solid 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
     }
-    
     .container .btn:hover {
-        background-color: black;
-        color: white;
+    background-color: black;
+    color: white;
     }
-
     #background {
     padding: 10em 0;
     margin-bottom: 0;
     background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678625438/DSC_0992_fzukfv.jpg') center center / cover no-repeat;
-}
-    </style>
-
+    }
+</style>
 <div class="container" id="background">
-<a class="button-wrapper col-md-4" href="{% url 'create-post' %}" >
+    <a class="button-wrapper col-md-4" href="{% url 'create-post' %}" >
     <span>
-        <button type="button" class="btn btn-success text-font btn-custom">Create Post</button>
+    <button type="button" class="btn btn-success text-font btn-custom">Create Post</button>
     </span>
-</a>
+    </a>
 </div>
 <div class="container-fluid">
     <div class="row">
-
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -78,19 +67,16 @@
                                 <h2 class="card-title text-font">{{ post.title }}</h2>
                                 <p class="card-text text-font">{{ post.excerpt }}</p>
                             </a>
-
                             <hr />
                             <p class="card-text text-muted h6 text-font">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
-   
-     <div>
-        {% if post.author == request.user %}
-        <a href="{% url 'blog-edit' post.slug %}"><button type="button" class="btn btn-outline-primary text-font">Edit Post</button></a>
-        <a href="{% url 'blog-delete' post.slug %}"><button type="button" class="btn btn-outline-danger text-font">Delete Post</button></a>
-        {% endif %}
-    </div>
-  
-
+                                {{ post.number_of_likes }}
+                            </p>
+                            <div>
+                                {% if post.author == request.user %}
+                                <a href="{% url 'blog-edit' post.slug %}"><button type="button" class="btn btn-outline-primary text-font">Edit Post</button></a>
+                                <a href="{% url 'blog-delete' post.slug %}"><button type="button" class="btn btn-outline-danger text-font">Delete Post</button></a>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,7 +85,6 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -111,12 +96,9 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
             {% endif %}
         </ul>
     </nav>
     {% endif %}
 </div>
-
-
 {%endblock%}

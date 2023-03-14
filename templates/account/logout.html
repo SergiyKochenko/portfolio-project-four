@@ -1,43 +1,33 @@
 {% extends "base.html" %}
-
 {% load i18n %}
-
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
-
 {% block content %}
-
 <html>
-<style>
-.logout-bg-page {
-    background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678562753/DSC_1045_lo9gt0.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    text-decoration: none;
-}
-
-</style>
-
-<section class="logout-bg-page">
-<div  class="text-center cm-auto p-5">
-	<h2 class="bookings-title mb-4 text-font text-white">{% trans "Sign Out" %}</h2>
-	<div class="logout-contain col-sm-8 col-md-6 my-3 offset-sm-2 offset-md-3 text-white">
-		<p class="text-font text-white">{% trans 'Are you sure you want to sign out?' %}</p>
-		<form method="post" action="{% url 'account_logout' %}">
-        {% csrf_token %}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-        {% endif %}
-		<div class="text-center m-auto pt-5 col-sm-8 col-nd-6 my-3 offset-sm-2 offset-md-3">
-			<button class="btn btn btn-success right text-font" type="submit">{% trans 'Sign Out' %}</button>
-		</div>
-     	</form>
-    </div>
-</div>
-</section>
-
+    <style>
+        .logout-bg-page {
+        background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678562753/DSC_1045_lo9gt0.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        text-decoration: none;
+        }
+    </style>
+    <section class="logout-bg-page">
+        <div  class="text-center cm-auto p-5">
+            <h2 class="bookings-title mb-4 text-font text-white">{% trans "Sign Out" %}</h2>
+            <div class="logout-contain col-sm-8 col-md-6 my-3 offset-sm-2 offset-md-3 text-white">
+                <p class="text-font text-white">{% trans 'Are you sure you want to sign out?' %}</p>
+                <form method="post" action="{% url 'account_logout' %}">
+                    {% csrf_token %}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                    {% endif %}
+                    <div class="text-center m-auto pt-5 col-sm-8 col-nd-6 my-3 offset-sm-2 offset-md-3">
+                        <button class="btn btn btn-success right text-font" type="submit">{% trans 'Sign Out' %}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </html>
 {% endblock %}
-
-
-
