@@ -31,10 +31,10 @@ def about_page(request):
 #     return render(request, 'usersblog.html', {'posts':posts})
 
 # ======================================
-@login_required()
+# @login_required()
 def usersblog_page(request):
     posts = Post.objects.all()
-    paginator = Paginator(posts, 2)
+    paginator = Paginator(posts, 4)
     page = request.GET.get('page')
     page_obj = paginator.get_page(page)
     context = {
@@ -44,7 +44,7 @@ def usersblog_page(request):
     return render(request, 'usersblog.html', context)
 # ====================================================
     
-# @login_required()
+@login_required()
 def create_post(request):
     if request.method == 'POST':
         form = CreatePostForm(request.POST, request.FILES)
@@ -60,7 +60,7 @@ def create_post(request):
     }
     return render(request, 'create-post.html', context)
 
-
+@login_required()
 def usersblog_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(approved=True)
@@ -81,7 +81,7 @@ def usersblog_detail(request, slug):
 
     return render(request, 'usersblog_detail.html', context)
 
-
+@login_required()
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
     if request.method == 'POST':
@@ -98,7 +98,7 @@ def edit_post(request, slug):
     }
     return render(request, 'edit_post.html', context)
 
-
+@login_required()
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
     if request.method == 'POST':
@@ -138,7 +138,7 @@ def services(request):
     services = Service.objects.all()
     return render(request, 'services.html', {'services': services})
 
-
+@login_required()
 def booknow(request):
     """The view for the booking page. If user is logged in it renders the
     booknow.html, otherwise it redirects user to the login page or signup page.
@@ -162,7 +162,7 @@ def booknow(request):
     form = BookingForm()
     return render(request, 'booknow.html', {'form': form})
 
-
+@login_required()
 def bookings(request):
     """This view checks if user is logged in and renders the
     bookings.html page which shows user bookings and otherwise
@@ -177,7 +177,7 @@ def bookings(request):
     else:
         return redirect('../accounts/signup')
 
-
+@login_required()
 def change_booking(request, booking_id):
     """The view that renders the change_booking page where the user can
     update a current booking.
@@ -202,7 +202,7 @@ def change_booking(request, booking_id):
     context = {'form': form, 'record': record}
     return render(request, 'change-booking.html', context)
 
-
+@login_required()
 def delete_booking(request, booking_id):
     """
     Function enables user to delete a booking record

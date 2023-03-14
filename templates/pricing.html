@@ -1,5 +1,59 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h3>Test page</h3>
+
+<style>
+    #background {
+	padding: 10em 0;
+	margin-bottom: 0;
+	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678617023/DSC_1033_kcoo6m.jpg') center center / cover no-repeat fixed;
+}
+    .booknow-contain {
+    margin: 0 auto;
+    background-color: #312E38;
+    opacity: 0.9;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    width: auto;
+}
+</style>
+
+<div id="background">
+<table class="table table-hover table-dark booknow-contain">
+    <thead>
+      <tr>
+        <th class="text-font" scope="col">#</th>
+        <th class="text-font" scope="col">Service</th>
+        <th class="text-font" scope="col">Price</th>
+        <th class="text-font" scope="col">Create</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-font" scope="row">1</th>
+        <td class="text-font">Visit Terarium</td>
+        <td class="text-font">€10</td>
+        <td><a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book</a></td>
+      </tr>
+      <tr>
+        <th class="text-font" scope="row">2</th>
+        <td class="text-font">Photography Session</td>
+        <td class="text-font">€10</td>
+        <td><a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book</a></td>
+      </tr>
+      <tr>
+        <th class="text-font" scope="row">3</th>
+        <td class="text-font">Visit Exibition Room</td>
+        <td class="text-font">€10</td>
+        <td><a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book</a></td>
+      </tr>
+      <tr>
+        <th class="text-font" scope="row">4</th>
+        <td class="text-font">Children Play Room</td>
+        <td class="text-font">€0</td>
+        <td><a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 {%endblock%}
