@@ -1,14 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200&family=Permanent+Marker&family=Play:wght@400;700&family=Shadows+Into+Light+Two&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200&family=Permanent+Marker&family=Play:wght@400;700&family=Shadows+Into+Light+Two&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap'); */
 
 
-#background {
+/* #background {
     padding: 10em 0;
     margin-bottom: 0;
     background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678873879/DSC_0578_b138ks.jpg') center center / cover no-repeat fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100%;
     text-decoration: none;
+} */
+
+
+#background {
+	padding: 10em 0;
+	margin-bottom: 0;
+	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678873879/DSC_0578_b138ks.jpg') center center / cover no-repeat fixed;
+}
+
+.card {
+    width: 20rem;
+    display: inline-block;
+    align-items: center;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.pt-5 {
+    margin-bottom: 30px;
 }
