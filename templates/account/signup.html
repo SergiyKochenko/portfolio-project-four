@@ -11,7 +11,9 @@
     opacity: 0.9;
     border: 1px solid #6c757d;
     border-radius: 5px;
-    }
+    width: min-content;
+    display: inline-block;
+}
     .signup-bg-page {
     background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678581721/DSC_0988_drmjzk.jpg");
     background-repeat: no-repeat;
@@ -19,6 +21,16 @@
     height: 100%;
     text-decoration: none;
     }
+    .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+    
     .gradient-custom-3 {
     /* fallback for old browsers */
     background: #84fab0;
@@ -36,9 +48,9 @@
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
     }
 </style>
-<section class="signup-bg-page vh-100 bg-imagevh-100 bg-image">
-    <div class="row d-flex p-5">
-        <div class="text-center m-auto p-5 col-sm-8 col-nd-6 my-3 offset-sm-2 offset-md-3 form-container">
+<section class="signup-bg-page vh-100 bg-imagevh-100 bg-image m-auto">
+    <div class="row d-flex">
+        <div class="text-center m-auto col-sm-8 col-nd-6 my-3 offset-sm-2 offset-md-3 form-container">
             <h1 class="text-white bookings-title mb-4 text-font">Create an account</h1>
             <div class="card-body card rouded m-2 shadow-sm border-0 form-card signup-contain">
                 <div class="p-3 blog-card tex-white form-card-body">

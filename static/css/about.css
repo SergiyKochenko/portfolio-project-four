@@ -16,8 +16,22 @@
 	padding: 10em 0;
 	margin-bottom: 0;
 	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678873879/DSC_0578_b138ks.jpg') center center / cover no-repeat fixed;
+    height: 100%;
+    text-decoration: none;
+    contain: content;
+    color: black;
 }
 
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+    align-self: center;
+}
+/* 
 .card {
     width: 20rem;
     display: inline-block;
@@ -33,4 +47,4 @@
 
 .pt-5 {
     margin-bottom: 30px;
-}
+} */
