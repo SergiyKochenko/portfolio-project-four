@@ -13,7 +13,7 @@
 
 
 #background {
-	padding: 10em 0;
+	padding: 1em 0;
 	margin-bottom: 0;
 	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678873879/DSC_0578_b138ks.jpg') center center / cover no-repeat fixed;
     height: 100%;
@@ -31,9 +31,9 @@
     margin-top: var(--bs-gutter-y);
     align-self: center;
 }
-/* 
+
 .card {
-    width: 20rem;
+    width: auto;
     display: inline-block;
     align-items: center;
 }
@@ -43,8 +43,10 @@
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
+    opacity: 0.8;
+    margin: 10px;
 }
 
 .pt-5 {
     margin-bottom: 30px;
-} */
+}

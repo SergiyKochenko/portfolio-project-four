@@ -14,13 +14,22 @@
     width: min-content;
     display: inline-block;
 }
-    .signup-bg-page {
+    /* .signup-bg-page {
     background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678581721/DSC_0988_drmjzk.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     text-decoration: none;
-    }
+    } */
+    #background {
+	padding: 5em 0;
+	margin-bottom: 0;
+	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678887298/DSC_0032_j1lfdd.jpg') center center / cover no-repeat fixed;
+    height: 100%;
+    text-decoration: none;
+    display: table;
+}
+
     .row {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
@@ -48,7 +57,7 @@
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
     }
 </style>
-<section class="signup-bg-page vh-100 bg-imagevh-100 bg-image m-auto">
+<section id="background" class="signup-bg-page vh-100 bg-imagevh-100 bg-image m-auto">
     <div class="row d-flex">
         <div class="text-center m-auto col-sm-8 col-nd-6 my-3 offset-sm-2 offset-md-3 form-container">
             <h1 class="text-white bookings-title mb-4 text-font">Create an account</h1>

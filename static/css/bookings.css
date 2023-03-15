@@ -1,7 +1,7 @@
 /*** Booknow page ***/
 
 .booking-page {
-    background: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678573937/DSC_0904_fwqrih.jpg") center center / cover no-repeat fixed;
+    background: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678894345/DSC_00112_smy9hx.jpg") center center / cover no-repeat fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -25,6 +25,8 @@
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
+    border: solid 1px grey;
+    border-radius: 5px;
 }
 
 .pt-5 {
