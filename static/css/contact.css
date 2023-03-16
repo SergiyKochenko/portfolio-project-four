@@ -31,9 +31,10 @@
     letter-spacing: .2px;
 }
 
-.button-wrapper{
-  display: flex;	
-  justify-content: center;	
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    color: red;
 }
 
 .text-font {

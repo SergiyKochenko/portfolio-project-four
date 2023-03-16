@@ -20,7 +20,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand"><span class="brand text-font" style="color:white;">C<span class="red-o text-font">o</span>mp<span class="pink-a text-font">a</span>ny<span class="thin text-font">logo</span></span></a>
+                <a class="navbar-brand"><span class="brand text-font" style="color:white;">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">house</span></span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,6 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" href="{% url 'account_logout' %}">Logout</a>
                         </li>
-                        <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
                         {% else %}
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" href="{% url 'account_signup' %}">Register</a>
@@ -64,6 +63,11 @@
                     </ul>
                 </div>
             </div>
+            {% if user.is_authenticated %}
+            <div>
+                <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
+            </div>
+            {% endif %}
         </nav>
         <div class="container">
             <div class="row">
@@ -86,13 +90,13 @@
         <!-- <section style="background-color: #f8f9fa; height: inherit;"></section> -->
         <footer class="footer-distributed">
             <div class="footer-left">
-                <h3 class="text-font" style="color:white;"><span class="text-font">C<span class="red-o text-font">o</span>mp<span class="pink-a text-font">a</span>ny<span class="thin text-font">logo</span></span></h3>
+                <h3 class="text-font" style="color:white;"><span class="text-font">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">house</span></span></h3>
                 <p class="footer-links">
-                    <a href="{% url 'home' %}" class="link-1 text-font">Home</a>
-                    <a href="{% url 'usersblog' %}" class="text-font">Blog</a>
+                    <a href="{% url 'usersblog' %}" class="link-1 text-font">Home</a>
+                    <a href="{% url 'usersblog' %}" class="text-font">User's Blog</a>
                     <a href="{% url 'pricing' %}" class="text-font">Pricing</a>
+                    <a href="{%url 'booknow' %}" class="text-font">Book Now</a>
                     <a href="{% url 'about' %}" class="text-font">About</a>
-                    <a href="#" class="text-font">Faq</a>
                     <a href="{% url 'contact' %}" class="text-font">Contact</a>
                 </p>
                 <p class="footer-company-name text-font">

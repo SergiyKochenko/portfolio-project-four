@@ -19,10 +19,9 @@
     height: 100%;
     text-decoration: none;
     contain: content;
-    color: black;
 }
 
-.row>* {
+/* .row>* {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
@@ -45,8 +44,7 @@
     padding: 1.25rem;
     opacity: 0.8;
     margin: 10px;
-}
-
-.pt-5 {
-    margin-bottom: 30px;
+} */
+.p-5 {
+    padding: 1rem!important;
 }
