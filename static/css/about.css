@@ -22,7 +22,7 @@
     min-height: 80vh;
 }
 
-/* .row>* {
+.row>* {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
@@ -36,6 +36,7 @@
     width: auto;
     display: inline-block;
     align-items: center;
+
 }
 
 .card-body {
@@ -45,7 +46,12 @@
     padding: 1.25rem;
     opacity: 0.8;
     margin: 10px;
-} */
+
+}
 .p-5 {
     padding: 1rem!important;
+}
+.p-3 {
+    padding: 1rem!important;
+    border-radius: 5px;
 }

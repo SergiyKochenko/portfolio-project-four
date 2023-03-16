@@ -61,13 +61,13 @@
                         </li>
                         {% endif %}
                     </ul>
+                    {% if user.is_authenticated %}
+                    <div>
+                        <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
-            {% if user.is_authenticated %}
-            <div>
-                <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
-            </div>
-            {% endif %}
         </nav>
         <div class="container">
             <div class="row">
