@@ -9,12 +9,8 @@ from .forms import BookingForm
 from .models import Booking
 import datetime
 from dateutil import parser
-
-
-
-# =======================
 from django.core.paginator import Paginator
-# ======================
+
 
 
 def about_page(request):
@@ -22,6 +18,7 @@ def about_page(request):
     This view renders to the user the about page.
     """
     return render(request, 'about.html')
+
 
 
 # @login_required()
@@ -139,6 +136,7 @@ def services(request):
     """
     services = Service.objects.all()
     return render(request, 'services.html', {'services': services})
+
 
 @login_required()
 def booknow(request):
