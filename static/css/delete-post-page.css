@@ -4,6 +4,7 @@
     background-size: cover;
     height: 100vh;
     text-decoration: none;
+    min-height: 80vh;
 }
 
 .delete-post-contain {

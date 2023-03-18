@@ -19,7 +19,14 @@ def about_page(request):
     """
     return render(request, 'about.html')
 
-
+# ========================
+def services(request):
+    """
+    This view renders to the user the services page.
+    """
+    services = Service.objects.all()
+    return render(request, 'pricing.html', {'services': services})
+# =========================
 
 # @login_required()
 # def usersblog_page(request):

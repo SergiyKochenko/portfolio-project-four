@@ -10,6 +10,7 @@
 	padding: 10em 0;
 	margin-bottom: 0;
 	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678892219/DSC_0076_ozv1up.jpg') center center / cover no-repeat fixed;
+    min-height: 80vh;
 }
 
 

@@ -4,6 +4,7 @@
     background-size: cover;
     height: 100%;
     text-decoration: none;
+    min-height: 80vh;
 }
 
 .edit-post-contain {
