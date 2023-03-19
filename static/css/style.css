@@ -278,11 +278,3 @@ body{
     border-radius: 0.25rem;
     transition: box-shadow .15s ease-in-out;
 }
-/* ======================================== */
-@media (min-width: 1158px){
-.navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    flex-basis: auto;
-}
-}
-/* ========================================= */
