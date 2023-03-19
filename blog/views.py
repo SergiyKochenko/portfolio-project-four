@@ -19,14 +19,14 @@ def about_page(request):
     """
     return render(request, 'about.html')
 
-# ========================
-def services(request):
-    """
-    This view renders to the user the services page.
-    """
-    services = Service.objects.all()
-    return render(request, 'pricing.html', {'services': services})
-# =========================
+# # ========================
+# def services(request):
+#     """
+#     This view renders to the user the services page.
+#     """
+#     services = Service.objects.all()
+#     return render(request, 'pricing.html', {'services': services})
+# # =========================
 
 # @login_required()
 # def usersblog_page(request):
@@ -137,15 +137,15 @@ def contact_page(request):
     return render(request, 'contact.html')
 
 
-def services(request):
-    """
-    This view renders to the user the services page.
-    """
-    services = Service.objects.all()
-    return render(request, 'services.html', {'services': services})
+# def services(request):
+#     """
+#     This view renders to the user the services page.
+#     """
+#     services = Service.objects.all()
+#     return render(request, 'services.html', {'services': services})
 
 
-@login_required()
+# @login_required()
 def booknow(request):
     """The view for the booking page. If user is logged in it renders the
     booknow.html, otherwise it redirects user to the login page or signup page.

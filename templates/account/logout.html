@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}
+{% trans "Sign Out" %}
+{% endblock %}
 {% block content %}
 <html>
     <style>
@@ -14,7 +16,8 @@
     </style>
     <section class="logout-bg-page">
         <div  class="text-center cm-auto p-5">
-            <h2 class="bookings-title mb-4 text-font text-white">{% trans "Sign Out" %}</h2>
+            <h1 class="bookings-title mb-4 text-font" style="color:white;"><span class="text-font">S<span class="red-o text-font">i</span><span class="pink-a text-font">g</span><span class="text-warning text-font">n</span><span class="thin text-font"> Out</span></span></h1>
+            <!-- <h2 class="bookings-title mb-4 text-font text-white">{% trans "Sign Out" %}</h2> -->
             <div class="logout-contain col-sm-8 col-md-6 my-3 offset-sm-2 offset-md-3 text-white">
                 <p class="text-font text-white">{% trans 'Are you sure you want to sign out?' %}</p>
                 <form method="post" action="{% url 'account_logout' %}">

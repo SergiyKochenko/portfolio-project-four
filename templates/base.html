@@ -29,7 +29,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand"><span class="brand text-font" style="color:white;">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">house</span></span></a>
+                <a class="navbar-brand"><span class="brand text-font" style="color:white;">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">House</span></span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,33 +40,33 @@
                             <a class="nav-link {% if request.path == '/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'about' %}">About</a>
+                            <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font brand-nav" aria-current="page" href="{% url 'about' %}"><span class="text-font">A<span class="red-o text-font">b</span><span class="text-warning text-font">o</span>u<span class="thin text-font">t</span></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/usersblog/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'usersblog' %}">User's Blog</a>
+                            <a class="nav-link {% if request.path == '/usersblog/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" aria-current="page" href="{% url 'usersblog' %}"><span class="text-font">U<span class="red-o text-font">s</span><span class="text-primary text-font">e</span><span class="pink-a text-font">r</span>'<span class="text-warning text-font">s</span><span class="text-info text-font"> B</span>l<span class="red-o text-font">o</span><span class="thin text-font">g</span></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/pricing/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
+                            <a class="nav-link {% if request.path == '/pricing/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" aria-current="page" href="{% url 'pricing' %}"><span class="text-font">P<span class="red-o text-font">r</span><span class="text-primary text-font">i</span><span class="pink-a text-font">c</span>i<span class="text-warning text-font">n</span><span class="text-info text-font"><span class="thin text-font">g</span></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/contact/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'contact' %}">Contact</a>
+                            <a class="nav-link {% if request.path == '/contact/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" aria-current="page" href="{% url 'contact' %}"><span class="text-font">C<span class="red-o text-font">o</span><span class="text-primary text-font">n</span><span class="pink-a text-font">t</span>a<span class="text-warning text-font">c</span><span class="thin text-font">t</span></span></a>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/booknow/' %}active{% endif %} butn text-font" aria-current="page" href="{%url 'booknow' %}">Book Now</a>
+                            <a class="nav-link {% if request.path == '/booknow/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" aria-current="page" href="{%url 'booknow' %}"><span class="text-font">B<span class="red-o text-font">o</span><span class="text-primary text-font">o</span><span class="pink-a text-font">k</span><span class="text-info text-font"> N</span><span class="text-warning text-font">o</span><span class="thin text-font">w</span></span></a>
                         </li>
                         </li>                    
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/bookings/' %}active{% endif %} butn text-font" href="{% url 'bookings' %}">My bookings</a>
+                            <a class="nav-link {% if request.path == '/bookings/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" href="{% url 'bookings' %}"><span class="text-font">M<span class="red-o text-font">y</span><span class="text-primary text-font"> B</span><span class="pink-a text-font">o</span>o<span class="text-warning text-font">k</span><span class="text-info text-font">i</span>n<span class="red-o text-font">g</span><span class="thin text-font">s</span></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" href="{% url 'account_logout' %}">Logout</a>
+                            <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" href="{% url 'account_logout' %}"><span class="thin text-font">Logout</span></a>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" href="{% url 'account_signup' %}">Register</a>
+                            <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" href="{% url 'account_signup' %}"><span class="text-font">R<span class="red-o text-font">e</span><span class="text-primary text-font">g</span>i<span class="pink-a text-font">s</span><span class="text-warning text-font">t</span>e<span class="thin text-font">r</span></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/account_login/' %}active{% endif %} butn text-font" href="{% url 'account_login' %}">Login</a>
+                            <a class="nav-link {% if request.path == '/account_login/' %}active{% endif %} butn text-font" style="color:white; font-size: 20px;" href="{% url 'account_login' %}"><span class="text-font">L<span class="red-o text-font">o</span><span class="text-warning text-font">g</span><span class="pink-a text-font">i</span><span class="thin text-font">n</span></span></a>
                         </li>
                         {% endif %}
                     </ul>
@@ -99,7 +99,7 @@
         <!-- <section style="background-color: #f8f9fa; height: inherit;"></section> -->
         <footer class="footer-distributed mt-auto">
             <div class="footer-left">
-                <h3 class="text-font" style="color:white;"><span class="text-font">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">house</span></span></h3>
+                <h3 class="text-font" style="color:white;"><span class="text-font">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">House</span></span></h3>
                 <p class="footer-links">
                     <a href="{% url 'usersblog' %}" class="link-1 text-font">Home</a>
                     <a href="{% url 'usersblog' %}" class="text-font">User's Blog</a>
