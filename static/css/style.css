@@ -7,7 +7,7 @@ body {
 
 .brand {
     font-family: Lato, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
 }
@@ -278,4 +278,12 @@ body{
     border: 1px solid #d3053e;
     border-radius: 0.25rem;
     transition: box-shadow .15s ease-in-out;
+}
+
+
+@media (min-width: 1154px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+}
 }

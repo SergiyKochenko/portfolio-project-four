@@ -1,19 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 {% block head_title %}
 {% trans "Sign Out" %}
 {% endblock %}
 {% block content %}
+
 <html>
-    <style>
-        .logout-bg-page {
-        background-image: url("https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678562753/DSC_1045_lo9gt0.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/logout.css' %}">
     <section class="logout-bg-page">
         <div  class="text-center cm-auto p-5">
             <h1 class="bookings-title mb-4 text-font" style="color:white;"><span class="text-font">S<span class="red-o text-font">i</span><span class="pink-a text-font">g</span><span class="text-warning text-font">n</span><span class="thin text-font"> Out</span></span></h1>
