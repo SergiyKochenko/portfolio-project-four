@@ -279,11 +279,25 @@ body{
     border-radius: 0.25rem;
     transition: box-shadow .15s ease-in-out;
 }
-
+/* ========================= */
 
 @media (min-width: 1154px){
-.navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    flex-basis: auto;
+    .navbar-expand-lg .navbar-collapse {
+       display: flex!important;
+       flex-basis: auto;
+    }
 }
+@media (min-width: 1135px){
+    .navbar-expand-lg {
+       flex-wrap: nowrap;
+       justify-content: flex-start;
+    }
 }
+
+@media (min-width: 1025px){
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+/* ================================ */
