@@ -19,22 +19,15 @@ def about_page(request):
     """
     return render(request, 'about.html')
 
-# # ========================
-# def services(request):
-#     """
-#     This view renders to the user the services page.
-#     """
-#     services = Service.objects.all()
-#     return render(request, 'pricing.html', {'services': services})
-# # =========================
+# -------------------------------
+def services(request):
+    """
+    This view renders to the user the services page.
+    """
+    services = Service.objects.all()
+    return render(request, 'pricing.html', {'services': services})
+# -------------------------------
 
-# @login_required()
-# def usersblog_page(request):
-#     """
-#     This view renders to the user the about page.
-#     """
-#     posts = Post.objects.all()
-#     return render(request, 'usersblog.html', {'posts':posts})
 
 # ======================================
 # @login_required()
@@ -137,14 +130,6 @@ def contact_page(request):
     return render(request, 'contact.html')
 
 
-# def services(request):
-#     """
-#     This view renders to the user the services page.
-#     """
-#     services = Service.objects.all()
-#     return render(request, 'services.html', {'services': services})
-
-
 # @login_required()
 def booknow(request):
     """The view for the booking page. If user is logged in it renders the
@@ -225,12 +210,6 @@ def delete_booking(request, booking_id):
         'form': form, 'record': record}
     return render(request, 'delete-booking.html', context)
 
-
-# class PostList(generic.ListView):
-#     model = Post
-#     queryset = Post.objects.filter(status=1).order_by("-created_on")
-#     template_name = "index.html"
-#     paginate_by = 4
 
 # ============================================================
 class PostList(generic.ListView):

@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 .edit-post-bg-page {
 background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678887298/DSC_0032_j1lfdd.jpg') center center / cover no-repeat fixed;
 background-repeat: no-repeat;
@@ -28,7 +27,7 @@ background-image: linear-gradient(45deg, rgb(0, 0, 0), transparent);
 border-radius: 5px;
 }
 .form input {
-font-family: "Roboto", sans-serif;
+font-family: 'Merienda One', 'Brush Script MT', cursive;
 outline: 0;
 background: #f2f2f2;
 width: 100%;
@@ -39,7 +38,6 @@ box-sizing: border-box;
 font-size: 14px;
 }
 .form button {
-font-family: "Roboto", sans-serif;
 text-transform: uppercase;
 outline: 0;
 background: #4CAF50;
@@ -108,7 +106,7 @@ color: #EF3B3A;
 background: #76b852; /* fallback for old browsers */
 background: rgb(141,194,111);
 background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
-font-family: "Roboto", sans-serif;
+font-family: 'Merienda One', 'Brush Script MT', cursive;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;      
 } 
