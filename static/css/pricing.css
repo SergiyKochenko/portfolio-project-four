@@ -1,5 +1,5 @@
 #background {
-	padding: 10em 0;
+	padding: 5em 0;
 	margin-bottom: 0;
 	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678884135/DSC_0907_umnk6u.jpg') center center / cover no-repeat fixed;
   min-height: 75vh;
@@ -11,4 +11,62 @@
     border: 1px solid #6c757d;
     border-radius: 5px;
     width: auto;
+}
+
+.pricing-contain {
+  width: 97%;
+  margin: 0 auto;
+  background-color: #fff;
+  opacity: 0.9;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+}
+.pricing-block {
+  width: 100%;
+  margin: 3vh 1.5vh 0 1.5vh;
+  padding-bottom: 10px;
+}
+.pb-5 {
+  padding-bottom: 2rem!important;
+}
+.title-block-pricing {
+  background-color: #000;
+  opacity: 0.8;
+  color: #fff;
+}
+
+
+.pricing {
+  /* background-color: #fff;
+  opacity: 0.8; */
+  color: #000;
+}
+
+.pricing-item {
+  display: inline-block;
+  width: 100%;
+  padding: 0 2px;
+  vertical-align: middle;
+  margin: 0 auto;
+  height: 4em;
+  line-height: 4em;
+  border: 1px solid #312E38;
+  border-top:0;
+}
+
+.text-right,
+.text-left {
+  display: inline-block;
+}
+
+.text-left {
+  float: left;
+}
+
+.text-right {
+  float: right;
+}
+
+.btn-light {
+  border: 1px solid #000;
 }

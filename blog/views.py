@@ -6,7 +6,7 @@ from .models import Post
 from .forms import CommentForm, CreatePostForm, PostUpdateForm
 from django.contrib import messages
 from .forms import BookingForm
-from .models import Booking
+from .models import Booking, Service
 import datetime
 from dateutil import parser
 from django.core.paginator import Paginator
@@ -19,17 +19,7 @@ def about_page(request):
     """
     return render(request, 'about.html')
 
-# -------------------------------
-def services(request):
-    """
-    This view renders to the user the services page.
-    """
-    services = Service.objects.all()
-    return render(request, 'pricing.html', {'services': services})
-# -------------------------------
 
-
-# ======================================
 # @login_required()
 def usersblog_page(request):
     posts = Post.objects.all()
@@ -41,7 +31,7 @@ def usersblog_page(request):
         'page_obj': page_obj
     }
     return render(request, 'usersblog.html', context)
-# ====================================================
+
     
 @login_required()
 def create_post(request):
@@ -114,7 +104,8 @@ def pricing_page(request):
     """
     This view renders to the user the about page.
     """
-    return render(request, 'pricing.html')
+    services = Service.objects.all()
+    return render(request, 'pricing.html', {'services': services})
 
 def contact_page(request):
     """
@@ -211,13 +202,11 @@ def delete_booking(request, booking_id):
     return render(request, 'delete-booking.html', context)
 
 
-# ============================================================
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "usersblog.html"
     paginate_by = 4
-# ===========================================================
 
 
 class PostDetail(View):
