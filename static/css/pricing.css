@@ -1,5 +1,5 @@
 #background {
-	padding: 5em 0;
+	padding: 3em 0;
 	margin-bottom: 0;
 	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678884135/DSC_0907_umnk6u.jpg') center center / cover no-repeat fixed;
   min-height: 75vh;
@@ -14,7 +14,7 @@
 }
 
 .pricing-contain {
-  width: 97%;
+  /* width: 97%; */
   margin: 0 auto;
   background-color: #fff;
   opacity: 0.9;
@@ -26,9 +26,9 @@
   margin: 3vh 1.5vh 0 1.5vh;
   padding-bottom: 10px;
 }
-.pb-5 {
-  padding-bottom: 2rem!important;
-}
+/* .pb-5 {
+  padding-bottom: 6rem!important;
+} */
 .title-block-pricing {
   background-color: #000;
   opacity: 0.8;
@@ -69,4 +69,34 @@
 
 .btn-light {
   border: 1px solid #000;
+}
+
+
+/* for screens that are 480px wide or less */
+@media (max-width: 480px) {
+  .half-bg {
+      display: none;
+  }
+  .pricing-page,
+  .booknow-page {
+      background-image: none;
+  }
+
+  .change-form {
+      width: 95%;
+      padding: 10px;
+  }
+
+  .pricing-contain {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .pricing-item,
+  .btn-light {
+      margin-left: 1px;
+      margin-right: 1px;
+      font-size: 0.8rem;
+  }
+
 }

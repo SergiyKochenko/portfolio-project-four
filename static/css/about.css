@@ -55,3 +55,7 @@
     padding: 1rem!important;
     border-radius: 5px;
 }
+
+.bg-dark {
+    background-color: #d1dae3!important;
+}
