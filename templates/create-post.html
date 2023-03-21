@@ -4,10 +4,10 @@
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'css/create-post-page.css' %}">
-<section class="create-post-bg-page">
+<section id="background">
     <div class="row d-flex">
         <div class="text-center m-auto p-5 col-sm-8 col-nd-6 my-3 offset-sm-2 offset-md-3 form-container">
-            <h2 class="bookings-title mb-4 text-font">Create Your Post</h2>
+            <h2 class="bookings-title mb-5 text-white text-font"><span class="text-font">C<span class="red-o text-font">r</span><span class="text-primary text-font">e</span><span class="pink-a text-font">a</span>t<span class="text-warning text-font">e</span><span class="text-info text-font"> Y</span>o<span class="red-o text-font">u</span><span class="thin text-font">r</span><span class="text-info text-font"> P</span><span class="pink-a text-font">o</span><span class="red-o text-font">s</span><span class="thin text-font">t</span></span></h2>
             <div class="card rouded m-2 shadow-sm border-0 form-card create-post-contain">
                 <div class="card-body p-3 blog-card tex-white form-card-body">
                     <form class="create-post-form text-white" method="POST" action="{% url 'create-post' %}" enctype="multipart/form-data">

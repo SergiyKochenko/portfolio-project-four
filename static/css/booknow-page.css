@@ -9,7 +9,7 @@
 #background {
 	padding: 10em 0;
 	margin-bottom: 0;
-	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678892219/DSC_0076_ozv1up.jpg') center center / cover no-repeat fixed;
+	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1679347148/DSC_0037_i2h5n3.jpg') center center / cover no-repeat fixed;
     min-height: 80vh;
 }
 
@@ -20,4 +20,12 @@
     opacity: 0.9;
     border: 1px solid #6c757d;
     border-radius: 5px;
+}
+
+.mb-4 {
+    margin-bottom: 6.5rem!important;
+}
+
+.p-5 {
+    padding: 2rem!important;
 }
