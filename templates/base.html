@@ -1,161 +1,154 @@
 {% load static %}
 <!DOCTYPE html>
 <html class="h-100">
-    <head>
-        <title>AquariumHouse</title>
-        <link rel="shortcut icon" type="image/png" href="/static/images/fish.png">
-        <!-- Required meta tags -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="The official site of Aquarium house.">
-        <meta name="keywords" content="aquarium-show, Aquarium, Terrarium, aquerist">
-        <meta name="author" content="Aquarium house">
-         <!-- Bootstrap CSS -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'css/footer.css' %}">
-    </head>
-    <body class="d-flex flex-column h-100 main-bg">
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container-fluid">
-                <a class="navbar-brand"><span class="brand text-font" style="color:white;">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">House</span></span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'home' %}">Home</a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'about' %}"><span class="text-font">A<span class="red-o text-font">b</span><span class="text-warning text-font">o</span>u<span class="thin text-font">t</span></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/usersblog/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'usersblog' %}"><span class="text-font">U<span class="red-o text-font">s</span><span class="text-primary text-font">e</span><span class="pink-a text-font">r</span>'<span class="text-warning text-font">s</span><span class="text-info text-font"> B</span>l<span class="red-o text-font">o</span><span class="thin text-font">g</span></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/pricing/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'pricing' %}"><span class="text-font">P<span class="red-o text-font">r</span><span class="text-primary text-font">i</span><span class="pink-a text-font">c</span>i<span class="text-warning text-font">n</span><span class="text-info text-font"><span class="thin text-font">g</span></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/contact/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'contact' %}"><span class="text-font">C<span class="red-o text-font">o</span><span class="text-primary text-font">n</span><span class="pink-a text-font">t</span>a<span class="text-warning text-font">c</span><span class="thin text-font">t</span></span></a>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/booknow/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{%url 'booknow' %}"><span class="text-font">B<span class="red-o text-font">o</span><span class="text-primary text-font">o</span><span class="pink-a text-font">k</span><span class="text-info text-font"> N</span><span class="text-warning text-font">o</span><span class="thin text-font">w</span></span></a>
-                        </li>
-                        </li>                    
-                        {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/bookings/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'bookings' %}"><span class="text-font">M<span class="red-o text-font">y</span><span class="text-primary text-font"> B</span><span class="pink-a text-font">o</span>o<span class="text-warning text-font">k</span><span class="text-info text-font">i</span>n<span class="red-o text-font">g</span><span class="thin text-font">s</span></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'account_logout' %}"><span class="thin text-font">Logout</span></a>
-                        </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'account_signup' %}"><span class="text-font"><span class="thin text-font">Register</span></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/account_login/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'account_login' %}"><span class="text-font"><span class="thin text-font">Login</span></span></a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                    {% if user.is_authenticated %}
-                    <div>
-                        <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                        {{ message | safe }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
+  <head>
+    <title>AquariumHouse</title>
+    <link rel="shortcut icon" type="image/png" href="/static/images/fish.png">
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official site of Aquarium house.">
+    <meta name="keywords" content="aquarium-show, Aquarium, Terrarium, aquerist">
+    <meta name="author" content="Aquarium house">
+    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  </head>
+  <body class="d-flex flex-column h-100 main-bg">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand"><span class="brand text-font" style="color:white;">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">House</span></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'about' %}"><span class="text-font">A<span class="red-o text-font">b</span><span class="text-warning text-font">o</span>u<span class="thin text-font">t</span></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/usersblog/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'usersblog' %}"><span class="text-font">U<span class="red-o text-font">s</span><span class="text-primary text-font">e</span><span class="pink-a text-font">r</span>'<span class="text-warning text-font">s</span><span class="text-info text-font"> B</span>l<span class="red-o text-font">o</span><span class="thin text-font">g</span></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/pricing/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'pricing' %}"><span class="text-font">P<span class="red-o text-font">r</span><span class="text-primary text-font">i</span><span class="pink-a text-font">c</span>i<span class="text-warning text-font">n</span><span class="text-info text-font"><span class="thin text-font">g</span></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/contact/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{% url 'contact' %}"><span class="text-font">C<span class="red-o text-font">o</span><span class="text-primary text-font">n</span><span class="pink-a text-font">t</span>a<span class="text-warning text-font">c</span><span class="thin text-font">t</span></span></a>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/booknow/' %}active{% endif %} butn text-font" style="color:white;" aria-current="page" href="{%url 'booknow' %}"><span class="text-font">B<span class="red-o text-font">o</span><span class="text-primary text-font">o</span><span class="pink-a text-font">k</span><span class="text-info text-font"> N</span><span class="text-warning text-font">o</span><span class="thin text-font">w</span></span></a>
+            </li>
+            </li>                    
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/bookings/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'bookings' %}"><span class="text-font">M<span class="red-o text-font">y</span><span class="text-primary text-font"> B</span><span class="pink-a text-font">o</span>o<span class="text-warning text-font">k</span><span class="text-info text-font">i</span>n<span class="red-o text-font">g</span><span class="thin text-font">s</span></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'account_logout' %}"><span class="thin text-font">Logout</span></a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'account_signup' %}"><span class="text-font"><span class="thin text-font">Register</span></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/account_login/' %}active{% endif %} butn text-font" style="color:white;" href="{% url 'account_login' %}"><span class="text-font"><span class="thin text-font">Login</span></span></a>
+            </li>
+            {% endif %}
+          </ul>
+          {% if user.is_authenticated %}
+          <div>
+            <a class="navbar-brand"><span class="brand text-font" style="color:white;">W<span class="red-o text-font">e</span>lc<span class="pink-a text-font">o</span>me <span class="thin text-font">{{ user.username }}</span></span></a>
+          </div>
+          {% endif %}
         </div>
-        <main class="flex-shrink-0 main-bg">
-            {% block content %}
-            <!-- Content Goes here -->
-            {% endblock content %}
-        </main>
-        <!-- Footer -->
-        <!-- <section style="background-color: #f8f9fa; height: inherit;"></section> -->
-        <footer class="footer-distributed mt-auto">
-            <div class="footer-left">
-                <h3 class="text-font" style="color:white;"><span class="text-font">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">House</span></span></h3>
-                <p class="footer-links">
-                    <a href="{% url 'usersblog' %}" class="link-1 text-font">Home</a>
-                    <a href="{% url 'usersblog' %}" class="text-font">User's Blog</a>
-                    <a href="{% url 'pricing' %}" class="text-font">Pricing</a>
-                    <a href="{%url 'booknow' %}" class="text-font">Book Now</a>
-                    <a href="{% url 'about' %}" class="text-font">About</a>
-                    <a href="{% url 'contact' %}" class="text-font">Contact</a>
-                </p>
-                <p class="footer-company-name text-font">
-                    Copyright &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Company Name. All rights reserved.
-                </p>
-            </div>
-            <div class="footer-center">
-                <div>
-                    <a>
-                    <i class="fas fa-map-marker-alt"></i>
-                    </a>
-                    <a href="https://goo.gl/maps/taq2R6KVoNtFX13A7" target="_blank">
-                        <p class="text-font"><span class="text-font">Tralee, Kerry College, Monavally,</span> Co. Kerry, Ireland, V92 PW50</p>
-                    </a>
-                </div>
-                <div>
-                    <a>
-                    <a>
-                    <i aria-hidden="true" class="fas fa-phone-alt"></i>
-                    </a>
-                    <a class="thin text-font" href="tel:+3530667149600">(066)-714-9600</a>
-                    </a>
-                </div>
-                <div>
-                    <a>
-                    <i class="fa fa-envelope"></i>
-                    </a>
-                    <a class="thin text-font" href="mailto:sergiykochenko@gmail.com">support@company.com</a>
-                </div>
-            </div>
-            <div class="footer-right">
-                <p class="footer-company-about text-font">
-                    <span class="text-font">About the company</span>
-                    Shutter Fever Photography is a professional, full service photography studio based in Charlestown, Co Mayo.
-                </p>
-                <div class="footer-icons">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/sergiy-kochenko-a93a30135/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/SergiyKochenko/portfolio-p4" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </footer>
-        <!-- Function to close warning messages. Credit: CI walkthrough project code -->
-        <script>
-            setTimeout(function () {
-                let messages = document.getElementById('msg');
-                let alert = new bootstrap.Alert(messages);
-                alert.close();
-            }, 5000);
-        </script>
-    </body>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <main class="flex-shrink-0 main-bg">
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
+    </main>
+    <!-- Footer -->
+    <footer class="footer-distributed mt-auto">
+      <div class="footer-left">
+        <h3 class="text-font" style="color:white;"><span class="text-font">A<span class="red-o text-font">q</span><span class="text-primary text-font">u</span>a<span class="pink-a text-font">r</span><span class="text-warning text-font">i</span><span class="text-info text-font">u</span>m<span class="thin text-font">House</span></span></h3>
+        <p class="footer-links">
+          <a href="{% url 'usersblog' %}" class="link-1 text-font">Home</a>
+          <a href="{% url 'usersblog' %}" class="text-font">User's Blog</a>
+          <a href="{% url 'pricing' %}" class="text-font">Pricing</a>
+          <a href="{%url 'booknow' %}" class="text-font">Book Now</a>
+          <a href="{% url 'about' %}" class="text-font">About</a>
+          <a href="{% url 'contact' %}" class="text-font">Contact</a>
+        </p>
+        <p class="footer-company-name text-font">
+          Copyright &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Company Name. All rights reserved.
+        </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <a>
+          <i class="fas fa-map-marker-alt"></i>
+          </a>
+          <a href="https://goo.gl/maps/taq2R6KVoNtFX13A7" target="_blank">
+            <p class="text-font"><span class="text-font">Tralee, Kerry College, Monavally,</span> Co. Kerry, Ireland, V92 PW50</p>
+          </a>
+        </div>
+        <div>
+          <a>
+          <i aria-hidden="true" class="fas fa-phone-alt"></i>
+          </a>
+          <a class="thin text-font" href="tel:+3530667149600">(066)-714-9600</a>
+        </div>
+        <div>
+          <a>
+          <i class="fa fa-envelope"></i>
+          </a>
+          <a class="thin text-font" href="mailto:sergiykochenko@gmail.com">support@company.com</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about text-font">
+          <span class="text-font">About the company</span>
+          Shutter Fever Photography is a professional, full service photography studio based in Charlestown, Co Mayo.
+        </p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/sergiy-kochenko-a93a30135/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/SergiyKochenko/portfolio-p4" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- Function to close warning messages -->
+    <script>
+      setTimeout(function () {
+          let messages = document.getElementById('msg');
+          let alert = new bootstrap.Alert(messages);
+          alert.close();
+      }, 5000);
+    </script>
+  </body>
 </html>

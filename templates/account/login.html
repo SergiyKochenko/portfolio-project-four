@@ -6,32 +6,30 @@
 {% trans "Sign In" %}
 {% endblock %}
 {% block content %}
-
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 <section class="edit-post-bg-page p-5">
-    <h1 class="text-white text-font p-5"><span class="text-font">S<span class="red-o text-font">i</span><span class="text-primary text-font">g</span><span class="pink-a text-font">n</span><span class="thin text-font"> In</span></span></h1>
-    <div class="login-page" >
-        <div class="form">
-            <form class="login-form active" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="btn btn-signup right text-font" type="submit">{% trans "LOGIN" %}</button>
-                <p class="message text-font">Not registered? <a class="text-font" href="{{ signup_url }}">Create an account</a></p>
-            </form>
-        </div>
+  <h1 class="text-white text-font p-5"><span class="text-font">S<span class="red-o text-font">i</span><span class="text-primary text-font">g</span><span class="pink-a text-font">n</span><span class="thin text-font"> In</span></span></h1>
+  <div class="login-page" >
+    <div class="form">
+      <form class="login-form active" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn btn-signup right text-font" type="submit">{% trans "LOGIN" %}</button>
+        <p class="message text-font">Not registered? <a class="text-font" href="{{ signup_url }}">Create an account</a></p>
+      </form>
     </div>
-    </div>
+  </div>
 </section>
 <script
-    src="https://code.jquery.com/jquery-3.6.3.js"
-    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-    crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
 <script>
-    $('.message a').click(function(){
-     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-    });
+  $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+  });
 </script>
 {% endblock %}

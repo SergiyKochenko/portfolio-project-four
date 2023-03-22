@@ -1,10 +1,9 @@
 #background {
-	padding: 4em 0;
-	margin-bottom: 0;
-	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1679410568/DSC_00112_qslfd6.jpg') center center / cover no-repeat fixed;
+    padding: 4em 0;
+    margin-bottom: 0;
+    background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1679410568/DSC_00112_qslfd6.jpg') center center / cover no-repeat fixed;
     min-height: 75vh;
 }
-
 .elementor {
     color: #FFF;
     font-family: "Crimson Text",Sans-serif;
@@ -13,19 +12,14 @@
     text-transform: uppercase;
     line-height: 2.2em;
     letter-spacing: .2px;
-    /* mix-blend-mode: overlay; */
     font-size: medium;
 }
-
 .button-wrapper {
-    /* justify-content: center; */
     color: red;
 }
-
 .text-font {
     font-family: 'Merienda One', 'Brush Script MT', cursive;
 }
-
 .border-dark {
     border-color: #212529!important;
     margin: 2vh;
@@ -35,20 +29,13 @@
     max-width: fit-content;
     display: inline-block;
 }
-
 .text-dark {
     color: #212529!important;
     margin: 2vh;
 }
-
 .padding {
     padding: 5px;
 }
-
-
-
-
-
 .contact-contain {
     margin: 0 auto;
     background-color: #312E38;

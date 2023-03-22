@@ -2,11 +2,11 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    }
+}
 .container img {
     width: 100%;
     height: 400px;
-    }
+}
 .container .btn {
     position: absolute;
     top: 50%;
@@ -16,21 +16,20 @@
     background-color: #0000006e;
     color: black;
     font-size: 16px;
-    /* padding: 16px 30px; */
     border: solid 2px;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
-    }
+}
 .container .btn:hover {
     background-color: black;
     color: white;
-    }
+}
 #background {
     padding: 10em 0;
     margin-bottom: 0;
     background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678625438/DSC_0992_fzukfv.jpg') center center / cover no-repeat;
-    }
+}
 #pagination-btn {
     padding: 0.5rem!important;
     width: auto;

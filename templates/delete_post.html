@@ -2,27 +2,26 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-
 <link rel="stylesheet" href="{% static 'css/delete-post-page.css' %}">
 <section class="delete-post-bg-page">
-    <div class="row text-center m-auto p-5">
-        <h2 class="bookings-title mb-4 text-font text-white">Delete Your Post</h2>
-        <div class="col-md-5 offset-md-3 delete-post-contain">
-            <div class="card rounded m-2 shadow-sm border-0">
-                <div class="card-body p-4">
-                    <div class="alert-danger text-font">
-                        Are you sure you want to delete this post?                    
-                    </div>
-                    <form action="{% url 'blog-delete' post.slug %}" method="POST" name="confirm" class="nt-5">
-                        {% csrf_token %}
-                        <div class="d-flex flex justify-content-between logout-buttons m-auto pt-5">
-                            <a href="{% url 'usersblog' %}" class="btn btn-outline-warning mx-auto mb-2 text-font">Go back</a>
-                            <input type="submit" class="btm btn-danger mx-auto mb-2 text-font" value="Delete" name="delete">
-                        </div>
-                    </form>
-                </div>
+  <div class="row text-center m-auto p-5">
+    <h2 class="bookings-title mb-4 text-font text-white">Delete Your Post</h2>
+    <div class="col-md-5 offset-md-3 delete-post-contain">
+      <div class="card rounded m-2 shadow-sm border-0">
+        <div class="card-body p-4">
+          <div class="alert-danger text-font">
+            Are you sure you want to delete this post?                    
+          </div>
+          <form action="{% url 'blog-delete' post.slug %}" method="POST" name="confirm" class="nt-5">
+            {% csrf_token %}
+            <div class="d-flex flex justify-content-between logout-buttons m-auto pt-5">
+              <a href="{% url 'usersblog' %}" class="btn btn-outline-warning mx-auto mb-2 text-font">Go back</a>
+              <input type="submit" class="btm btn-danger mx-auto mb-2 text-font" value="Delete" name="delete">
             </div>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 {%endblock%}

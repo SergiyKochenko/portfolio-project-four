@@ -1,57 +1,46 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
 {% block content %}
-
-
 <link rel="stylesheet" href="{% static 'css/contact.css' %}">
-<html>
-    <div id="background"  width="100%" height="auto">
-        <div class="text-center">
-            <div class="border padding contact-contain">
-            <h2 class="elementor text-font button-wrapper text-white" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:2300}" data-widget_type="heading.default">Get In Touch</h2>
-            <p class="elementor text-font button-wrapper text-white">Let’s Talk About Your Shoot Today</p>
-            <a class="button-wrapper" href="{%url 'booknow' %}" >
-            <span>
-            <button type="button" class="orange text-font btn btn-outline-warning">Book Now</button>
-            </span>
-            </a>
-            <div class="elementor  button-wrapper">
-                <div class="elementor-widget-container">
-                    <h2 class="elementor text-font button-wrapper text-white">Capturing Memories One Click at a Time with sharks, dolphins, crocodiles and more</h2>
-                </div>
-            </div>
-            </div>
+  <div id="background">
+    <div class="text-center">
+      <div class="border padding contact-contain">
+        <h2 class="elementor text-font button-wrapper text-white" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:2300}" data-widget_type="heading.default">Get In Touch</h2>
+        <p class="elementor text-font button-wrapper text-white">Let’s Talk About Your Shoot Today</p>
+        <a class="button-wrapper" href="{%url 'booknow' %}" >
+        <span class="orange text-font btn btn-outline-warning">Book Now</span>
+        </a>
+        <div class="elementor  button-wrapper">
+          <div class="elementor-widget-container">
+            <h2 class="elementor text-font button-wrapper text-white">Capturing Memories One Click at a Time with sharks, dolphins, crocodiles and more</h2>
+          </div>
         </div>
-<div class="text-center">
-<div class="border border-dark padding">
-                    <div>
-                        <div>
-                            <a>
-                            </a>
-                            <a href="https://goo.gl/maps/taq2R6KVoNtFX13A7" target="_blank">
-                                <p class="orange text-font text-dark btn btn-outline-warning"><i class="fas fa-map-marker-alt"></i><span class="text-font text-dark"> Tralee, Kerry College, Monavally,</span> Co. Kerry, Ireland, V92 PW50</p>
-                            </a>
-                        </div>
-                        <div class="padding">
-                            <a>
-                            <a>
-                            <i aria-hidden="true" class="fas fa-phone-alt"></i>
-                            </a>
-                            <a class="thin text-font" href="tel:+3530667149600">(066)-714-9600</a>
-                            </a>
-                        </div>
-                        <div class="padding pb-3">
-                            <a>
-                            <i class="fa fa-envelope"></i>
-                            </a>
-                            <a class="thin text-font" href="mailto:sergiykochenko@gmail.com">support@company.com</a>
-                        </div>
-                    </div>
-</div>
+      </div>
     </div>
+    <div class="text-center">
+      <div class="border border-dark padding">
+        <div>
+          <div>
+            <a>
+            </a>
+            <a href="https://goo.gl/maps/taq2R6KVoNtFX13A7" target="_blank">
+              <p class="orange text-font text-dark btn btn-outline-warning"><i class="fas fa-map-marker-alt"></i><span class="text-font text-dark"> Tralee, Kerry College, Monavally,</span> Co. Kerry, Ireland, V92 PW50</p>
+            </a>
+          </div>
+          <div class="padding">
+            <a>
+            <i aria-hidden="true" class="fas fa-phone-alt"></i>
+            </a>
+            <a class="thin text-font" href="tel:+3530667149600">(066)-714-9600</a>
+          </div>
+          <div class="padding pb-3">
+            <a>
+            <i class="fa fa-envelope"></i>
+            </a>
+            <a class="thin text-font" href="mailto:sergiykochenko@gmail.com">support@company.com</a>
+          </div>
+        </div>
+      </div>
     </div>
-</html>
-
+  </div>
 {%endblock%}

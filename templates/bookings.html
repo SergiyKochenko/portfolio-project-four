@@ -1,35 +1,35 @@
-{%extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/bookings.css' %}">
 <section class="booking-page">
-    <div class="mt-5 pt-5 text-center">
-        <h1 class="text-center text-white mb-5 text-font"><span class="text-font">M<span class="red-o text-font">a</span><span class="text-primary text-font">n</span>a<span class="pink-a text-font">g</span><span class="text-warning text-font">e</span><span class="text-info text-font"> y</span>o<span class="text-primary text-font">u</span><span class="red-o text-font">r</span><span class="thin text-font"> Bookings</span></span></h1>
-        {% for b in bookings %}
-        <div class="card text-white bg-dark border-secondary">
-            <div class="card-body">
-                <div class="booking-text text-left">
-                    <p class="text-font">Your booking ID is: {{b.id}} </p>
-                    <p class="text-white"><b class="text-font">On {{b.date}} at {{b.time}}</b></p>
-                    <p class="text-font">You booked:</p>
-                    <p class="text-font">{{b.service.service_name}}</p>
-                    <p><b class="text-font">Balance to pay: €{{b.service.price}}</b></p>
-                    <a href="{% url 'change_booking' b.id %}"
-                        class="card-link btn btn-secondary btn-book-secondary mt-3 mb-3 text-font">
-                    <i class="fa-solid fa-pen-to-square"></i> Change</a>
-                    <a href="{% url 'delete_booking' b.id %}"
-                        class="card-link btn btn-outline-warning btn-book-warning mt-3 mb-3 text-font">
-                    <i class="fa-solid fa-trash-can"></i> Delete</a>
-                </div>
-            </div>
+  <div class="mt-5 pt-5 text-center">
+    <h1 class="text-center text-white mb-5 text-font"><span class="text-font">M<span class="red-o text-font">a</span><span class="text-primary text-font">n</span>a<span class="pink-a text-font">g</span><span class="text-warning text-font">e</span><span class="text-info text-font"> y</span>o<span class="text-primary text-font">u</span><span class="red-o text-font">r</span><span class="thin text-font"> Bookings</span></span></h1>
+    {% for b in bookings %}
+    <div class="card text-white bg-dark border-secondary">
+      <div class="card-body">
+        <div class="booking-text text-left">
+          <p class="text-font">Your booking ID is: {{b.id}} </p>
+          <p class="text-white"><b class="text-font">On {{b.date}} at {{b.time}}</b></p>
+          <p class="text-font">You booked:</p>
+          <p class="text-font">{{b.service.service_name}}</p>
+          <p><b class="text-font">Balance to pay: €{{b.service.price}}</b></p>
+          <a href="{% url 'change_booking' b.id %}"
+            class="card-link btn btn-secondary btn-book-secondary mt-3 mb-3 text-font">
+          <i class="fa-solid fa-pen-to-square"></i> Change</a>
+          <a href="{% url 'delete_booking' b.id %}"
+            class="card-link btn btn-outline-warning btn-book-warning mt-3 mb-3 text-font">
+          <i class="fa-solid fa-trash-can"></i> Delete</a>
         </div>
-        {% empty %}
-        <div class="booknow-msg p-2">
-            <p class="pt-2 text-font">You have no bookings at the moment.
-                Click the button <a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book Now</a> to make a booking.
-            </p>
-        </div>
-        {% endfor %}
+      </div>
     </div>
+    {% empty %}
+    <div class="booknow-msg p-2">
+      <p class="pt-2 text-font">You have no bookings at the moment.
+        Click the button <a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book Now</a> to make a booking.
+      </p>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 {% endblock content %}

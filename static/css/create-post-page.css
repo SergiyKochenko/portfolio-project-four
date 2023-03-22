@@ -1,12 +1,11 @@
 #background {
-	padding: 2em 0;
-	margin-bottom: 0;
-	background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678760098/sfcraeqvhfxvpkuo7nz5.jpg') center center / cover no-repeat fixed;
+    padding: 2em 0;
+    margin-bottom: 0;
+    background: url('https://res.cloudinary.com/dvbhrs1gf/image/upload/v1678760098/sfcraeqvhfxvpkuo7nz5.jpg') center center / cover no-repeat fixed;
     min-height: 75vh;
     height: 100%;
     text-decoration: none;
 }
-
 .create-post-contain {
     margin: 0 auto;
     background-color: #312E38;
@@ -14,7 +13,6 @@
     border: 1px solid #6c757d;
     border-radius: 5px;
 }
-
 .row {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
@@ -24,11 +22,9 @@
     margin-right: calc(var(--bs-gutter-x)/ -2);
     margin-left: calc(var(--bs-gutter-x)/ -2);
 }
-
 .mb-5 {
     margin-bottom: 7rem!important;
 }
-
 .p-5 {
     padding: 0!important;
 }
