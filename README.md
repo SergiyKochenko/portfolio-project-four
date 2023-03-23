@@ -1,13 +1,14 @@
+## Table of contents
 - [**UX (User Experience)**](#ux-user-experience)
   - [**User Stories**](#user-stories)
-- [**Design and Site Structure**](#design-structure)
+- [**Design Structure**](#design-structure)
   - [**Functional Structure**](#functional-structure)
   - [**Wireframes**](#wireframes)
 - [**Features**](#features)
   - [**Responsive Design**](#responsive-design)
 - [**Technologies**](#technologies)
   - [**Languages**](#languages)
-  - [**Frameworks and Libraries**](#frameworks)
+  - [**Frameworks**](#frameworks)
   - [**Tools**](#tools)
 - [**Testing**](#testing)
 - [**Deployment**](#deployment)
@@ -20,7 +21,7 @@
 
  
 # Portfolio Project 4 - Aquarium House
-![](/static/assets/images/fish.png)
+![](/static/assets/images/amiresponsive-light.png)
 
 The deployed [AQUARIUM](https://app-portfolio-project-four.herokuapp.com/) app.
 
@@ -57,20 +58,18 @@ As a returning user, I want:
 #### Site Administrator goals
 As a Site Administrator I would like to be able to create, view, edit and delete booking data.    
 
-[Back to the top](#table-of-contents)
-
-
 ### Agile tools
 
 The GitHub Projects section was used as a [Kanban board](https://github.com/users/SergiyKochenko/projects/6) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.
 [User stories](https://github.com/SergiyKochenko/portfolio-project-four/issues) were used to break down the project into sub-tasks and placed on the Kanban board to work on them and track progress.
 
-## Design and Site structure
+[Back to the top](#table-of-contents)
+
+## Design Structure
 
 The site was based on the Blog template from the CodeInstitute site. The look of the site, color scheme, font, logo and image for the home page were made by myself from the template.
 The main page layout can be seen below:
 
----
 Aquerium House website design templates
 
 <details>
@@ -122,31 +121,264 @@ Aquerium House website design templates
 
 ### Functional Structure
 
-**Home page:** The home page contains a menu, logo and an image that gives the user an idea of ​​the type of service provided. Under the logo in the center are links to register a new user or login for an existing user.
+**Home page (User's Blog):** The home page contains a posts, logo and an image that gives the user an idea of ​​the type of service provided. Under the nav menu in the center is the button to create post, a new user or login for an existing user, only existing users can create a post. Not registered user will redirect to registration page.
 Registration and login are also available from the navigation bar.
 
-**Registration page:** The user must create an account to make a reservation. !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+**Create post page:** The create post page is only available to authenticated users.
+The user is asked to fill out a form with the required fields - title, content, image, and an optional field - excerpt.
+After filling out the form, the user is to submit button and than user will be redirected to the page of current user's blog.
+
+**Edit post page:** This page is available only to authenticated users and has the same functionality and form as the create post page, where users can update post details.
+
+**Delete post page:** This page is only available to authenticated users and has the same functionality and form as the create, update post page, where the user can update the post details. The user has the ability to delete user's post by selecting the Delete button on the post page. After that, user will be redirected to the delete page where user needs to confirm user's intention. After successfully deleting the post, user will return to the user's blog page and receives a message at the top of the screen.
+Also, if the user changes user's mind, user can return to the page by clicking on the go Back button.
+
+**Pricing page**
+
+The Pricing page provides information about all available Aquarium House services. User also can book necessary service straight from the Pricing page by clicking on the services price and the user will be redirected to creat booking form.
+
+**Registration page:** The user must create an account to make a reservation, or create post.
 To do this, user is asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
 
 **Login page:** A username and password are required to log in existing users.
-The user can use the navigation menu or the link under the logo on the home page.
-After a successful login, the user receives a message at the top of the screen and is redirected to the main page. !!!!!!!!!!!!!!!!!!!!!
+The user can use the navigation menu login button.
+After a successful login, the user receives a message at the top of the screen and is redirected to the main page.
 
-**Logout page:** Logging out of the account is done through the menu, after which the user is redirected to the logout page where user must confirm his desire to log out of the account. After a successful logout, the user is returned to the main page and receives a message at the top of the screen.
+**Logout page:** Logging out of the account is done through the navbar menu, after which the user is redirected to the logout page where user must confirm his desire to log out of the account. After a successful logout, the user is returned to the main page and receives a message at the top of the screen.
 
 **Booknow page:** The Booknow page is only available to authenticated users.
 The user is asked to fill out a form with the required fields - name, service, time and date, and an optional field - phone, email.
 After filling out the form, the user is redirected to the page of current bookings.
 
-**Booking page:** Only authenticated users have access to the Booking page. The link to this page becomes visible in the navigation menu once a user is authenticated. Booking page shows to user information about made bookings and contains Change button and Delete button for manage booking.
-
+**My Bookings page:** Only authenticated users have access to the Booking page. The link to this page becomes accessible in the navigation menu once a user is authenticated. Booking page shows to user information about made bookings and contains Change button and Delete button for manage booking.
 
 **Change booking page:** This page is available only to authenticated users and has the same functionality and form as the Booknow page, where users can change  booking details.
 
-**Delete booking page:** This page is only available to authenticated users and has the same functionality and form as the Booknow page, where the user can change the booking details. The user has the ability to delete user's booking by selecting the Delete button on the Booking page. After that, user will be redirected to the delete page where user needs to confirm user's intention. After successfully deleting the booking, user will return to the Booking page and and receives a message at the top of the screen.
+**Delete booking page:** This page is only available to authenticated users and has the same functionality and form as the Booknow page, where the user can change the booking details. The user has the ability to delete user's booking by selecting the Delete button on the Booking page. After that, user will be redirected to the delete page where user needs to confirm user's intention. After successfully deleting the booking, user will return to the Booking page and receives a message at the top of the screen.
 Also, if the user changes user's mind, user can return to the page by clicking on the Back to my Bookings button.
 
+**Contact page** The contact page contains a contact information, Google map, phone number and support email, photo shooting service and "Book Now" button. 
+The Book Now button is accessible for new user or login for an existing user, only existing users can book. Not registered user will redirect to message page with the message: "To make a reservation, please login, if youhave not created an account yet, then please sign up.
+Registration and login are also available from the navigation bar.
+
+**About page** The page is open for all users, and contains the description of the company.
+
+**Footer** The footer contains logo, navbar, contact information, social media icons, copyright.
+
 [Back to the top](#table-of-contents)
+
+### Wireframes
+
+The wireframes were slightly modified during the actual creation of the project, e.g. with pages installed removed form for user convenience and better UX.
+The wireframes can be seen below:
+
+**For Mobile view and small screens**
+
+<details>
+<summary>Home page</summary>
+
+![Home page](static/assets/wireframes/home-mobile.png)
+
+</details>
+
+<details>
+<summary>Sign up page</summary>
+
+![Sign up page](static/assets/wireframes/register-mobile.png)
+
+</details>
+
+<details>
+<summary>Services page</summary>
+
+![Services page](static/assets/wireframes/services-mobile.png)
+
+</details>
+
+
+<details>
+<summary>Bookings page</summary>
+
+![Bookings page](static/assets/wireframes/bookings-mobile.png)
+
+</details>
+
+<br />
+
+**For Desktop view**
+<details>
+<summary>Home page</summary>
+
+![Home page](static/assets/wireframes/home-desktop.png)
+
+</details>
+
+<details>
+<summary>Sign up page</summary>
+
+![Sign up page](static/assets/wireframes/register-desktop.png)
+
+</details>
+
+<details>
+<summary>Services page</summary>
+
+![Services page](static/assets/wireframes/services-desktop.png)
+
+</details>
+
+<details>
+<summary>Bookings page</summary>
+
+![Bookings page](static/assets/wireframes/bookings-desktop.png)
+
+</details>
+<br />
+
+[Back to the top](#table-of-contents)
+
+## Features
+
+### Navbar
+
+The navigation bar is present on all pages of the site. The navigation bar changes depending on whether the user is a guest or an authorized visitor.
+Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
+
+Navigation bar for an unauthorized user.
+
+![Main navigation](/static/assets/features/navbar.png)
+
+Navigation bar for an authorized user, menu items My Bookings and Logout are available.
+![Authenticated user's Navigation](/static/assets/features/logged-navbar.png)
+
+### Home page
+
+On the Home page a user can create an account or Login from the menu. 
+![Home page](/static/assets/features/home.png)
+
+### Sign up page
+
+To create an account user should fill in form provided on Sign up page.
+![Sign up page](/static/assets/features/signup.png)
+
+
+### Login page
+
+To login the user should enter credential data that was used during sign up process.
+
+![Sign in page](/static/assets/features/login.png)
+
+
+## Pricing page
+
+The Pricing page provides information about all available Aquarium House services. User also can book necessary service straight from the Pricing page by clicking on the services price.
+![Sign up page](/static/assets/features/pricing.png)
+
+#### Book Now page for the logged user
+
+Users must be logged in to make a booking. To book a service, the user must fill in the required fields in the form: name, services, date, time and an optional email,  phone fields.
+
+![Book Now page message](/static/assets/features/booknow.png)
+
+
+If the user is not authenticated then the user will be shown a message that the user has to sign up or login.
+![Book Now page message](/static/assets/features/booknow-msg.png)
+
+
+## My Bookings page
+
+The Booking page is available only to authorized users. The booking page displays the following data: order ID, date, time, service name and cost of the booked service.
+
+![Booking page](/static/assets/features/mybookings.png)
+
+If the user has not yet booked any services, then the user will be shown a message that the user has no bookings at the moment and there is an opportunity  to make a booking.
+
+![Booking page message](/static/assets/features/mybookings-msg.png)
+
+
+## Change booking page
+
+Each booking can be changed or deleted. The user must be authenticated in order to access the change user's bookings.
+The change booking page can be accessed for a specific booking. The page Change booking contains an auto-filled booking form. The user can change the fields at his discretion, or go back to bookings page by clicking the button "Back to my bookings".
+
+![Booking page message](/static/assets/features/change-booking.png)
+
+
+## Delete page
+
+The User must be authenticated to delete the booking. The Delete booking page provides two buttons: 'Yes, delete booking' and 'Back to my bookings' if the user changes his mind. 
+Deletion will delete the only specific booking for the user.
+
+![Delete booking page](/static/assets/features/delete-booking.png)
+
+
+## Logout page
+
+An authenticated user can logout from account by clicking the Logout button, after which the user will be redirected to the Logout page where the user needs to confirm to logout from account to prevent occasionally log out of user account.
+
+![Logout page](/static/assets/features/logout.png)
+
+
+### Responsive design
+The site has been designed to be responsive and adapted for desktop and mobile use.
+The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
+
+
+[Back to the top](#table-of-contents)
+
+
+## Technologies
+
+### Languages
+  - Python
+  - JavaScript
+  - HTML5
+  - CSS3
+
+### Frameworks
+
+  - [Django](https://www.djangoproject.com/): python framework used to create all the backend 
+
+
+### Database:
+  - [PostgreSQL](https://www.postgresql.org/): the database used to store all the data.
+
+
+### Tools
+
+- [Google Fonts:](https://fonts.google.com/) Was used to to incorporate font styles.  
+- [Font Awesome](https://fontawesome.com/): was used to create the icons used on the website.
+- [Bootstrap](https://getbootstrap.com/) Was used to create the front-end design.
+- [Gitpod:](https://Gitpod.io/) Gitpod was used as IDE to commit and push the project to GitHub.
+- [GitHub:](https://github.com/) Was used as a version control system to manage the code
+- [Figma:](https://www.figma.com/) Was used to create wireframes
+- [TinyPNG:](https://www.figma.com/) Was used to reduce the size and weight of images and optimizing interaction with the site 
+- [Am I Responsive](http://ami.responsivedesign.is/) to generate an image showcasing the website's responsiveness to different screen sizes 
+- [Pip3](https://pypi.org/project/pip/): is the package manager to install Python modules and libraries.
+- [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Requests for Python to understand.
+- [Spycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter so I can manage the Database in Python. 
+- [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images and other media.
+- [Heroku](https://dashboard.heroku.com/): the hosting service used to host the website.
+- [VSCode](https://code.visualstudio.com/): the IDE used to develop the website.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
+- [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website.
+- [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website.
+- [Github Projects and Kanban board](https://github.com/users/SergiyKochenko/projects/6) was used to track the progress of the project in general and of every application in the project.
+- [Free grammar checker](https://www.zoho.com/writer/free-grammar-checker.html)
+
+[Back to the top](#table-of-contents)
+
+
+
+
+
+
+
+
+
+
+
+
 
 MADE FORMATING HTML WITH: https://www.freeformatter.com/html-formatter.html#before-output
 
@@ -160,16 +392,17 @@ MADE FORMATING PYTHON WITH: https://black.vercel.app/
 
 #### Fixed Bugs
 
-|  Bug  |Bug image  |  Solution  |Status   |
+|  Bug  | Attached images  |  Solution  |Status   |
 |--|--|--|--|
 |  
-Menu on mobile devices is positioned incorrectly |![](static/assets/bugs/menu-position.png)  | fixed CSS style   | fixed |
-|Booking form does not appear on the booking page  | ![](static/assets/bugs/booking-form.png) | fixed by passing form object to the booknow.html template , placing form tags in in the proper template booknow.html | fixed |
+Menu on mobile devices is positioned incorrectly | - | fixed CSS style   | fixed |
+|Pricing form does not appear on the Pricing page  | - | fixed by passing form object to the pricing.html template , placing form tags in in the proper template pricing.html | fixed |
 | In the Gitpod Environment the site works with full CSS style,  but on Heroku the site  and the admin page (/admin) comes up without CSS styling  | - | Set DEBUG variable to False and remove the DISABLE_COLLECTSTATIC variable | fixed |
-| Function get_min_date isn't defined  | ![](static/assets/bugs/minvalue-validator.png)| fixed by removing function from views.py file and placing function in the forms.py so the form can access that function | fixed  |
+| Function get_min_date isn't defined  | see attached img 3 | fixed by removing function from views.py file and placing function in the forms.py so the form can access that function | fixed  |
 | When an invalid phone number is entered on the Booknow page, the form clears the fields and returns to its original state with no messages to the user. The Change Booking page also returns the form to its original state with pre-filled fields | - | Added regex validation for numeric input and displaying a message to the user | fixed  |
-| Pricing elements on the Pricing page are not displayed correctly on mobile devices |![](static/assets/bugs/services-btns-bug.png)  | added media queries rules for small screen devices  | fixed  |
+| Pricing elements on the Pricing page are not displayed correctly on mobile devices | see attached img 4 | added media queries rules for small screen devices  | fixed  |
 
+<br/>
 
 #### Unresolved Bugs
 No known bugs remaining
@@ -229,6 +462,8 @@ The available functionality and user experience is reflected in the table below.
 | |
 
 <br/>
+
+[Back to the top](#table-of-contents)
 
 ## Validation
 
@@ -333,6 +568,8 @@ The Linter reports had messages about exceeding the string length of 79 characte
 
 ![](/static/assets/validation/pylint/views.png)
 </details>
+
+[Back to the top](#table-of-contents)
 
 ---
 

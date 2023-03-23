@@ -24,9 +24,12 @@
       </div>
     </div>
     {% empty %}
-    <div class="booknow-msg p-2">
-      <p class="pt-2 text-font">You have no bookings at the moment.
-        Click the button <a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book Now</a> to make a booking.
+    <div class="card text-white bg-dark card-body border-secondary">
+      <p class="pt-2 text-font">You have no bookings at the moment.</p>
+       <p class="pt-2 text-font">Click the button to make a booking. 
+        <br/>
+        <br/>
+        <a href="{%url 'booknow' %}" class="orange text-font btn btn-outline-warning">Book Now</a>
       </p>
     </div>
     {% endfor %}
