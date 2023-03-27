@@ -23,12 +23,12 @@
 # Portfolio Project 4 - Aquarium House
 ![](/static/assets/images/amiresponsive-light.png)
 
-The deployed [AQUARIUM](https://app-portfolio-project-four.herokuapp.com/) app.
+The deployed [Aquarium House](https://app-portfolio-project-four.herokuapp.com/) app.
 
 The [GitHub repository](https://sergiykoche-portfoliopr-sugfh0sfbwm.ws-eu90.gitpod.io/)
 
-Project goals
-This is the fourth project under the Code Institute Diploma in Software Development (E-commerce Applications) program. This website is a fictional aquariumistics called AQUARIUM. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
+## Project goals
+This is the fourth project under the Code Institute Diploma in Software Development (E-commerce Applications) program. This website is a fictional aquariumistics called Aquarium House. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
 
 
 ## UX (User Experience)
@@ -51,12 +51,13 @@ As a returning user, I want:
 * to make a service booking.
 * to view my booking details. 
 * to edit my booking details or delete them.
+* to create users post, edit and delete them.
 * to sign out of my account to keep my account safe.
 * to be able to reserve a day and time for a service, view booking details and make changes to created bookings and delete my bookings.
 
 
 #### Site Administrator goals
-As a Site Administrator I would like to be able to create, view, edit and delete booking data.    
+As a Site Administrator I would like to be able to create, view, edit and delete booking data and create, edite, delete posts.
 
 ### Agile tools
 
@@ -101,6 +102,21 @@ Aquerium House website design templates
 <summary>My Bookings page </summary>
 
 ![Home page](/static/assets/images/bookings-page.png)
+</details>
+<details>
+<summary>Create Post </summary>
+
+![Home page](/static/assets/images/create-post.png)
+</details>
+<details>
+<summary>Edit Post </summary>
+
+![Home page](/static/assets/images/edit-post.png)
+</details>
+<details>
+<summary>Delete Post </summary>
+
+![Home page](/static/assets/images/delete-post.png)
 </details>
 <details>
 <summary>Logout page </summary>
@@ -184,7 +200,14 @@ The wireframes can be seen below:
 <details>
 <summary>Sign up page</summary>
 
-![Sign up page](static/assets/wireframes/register-mobile.png)
+![Sign up page](/static/assets/wireframes/sign-up-page.png)
+
+</details>
+
+<details>
+<summary>Login page</summary>
+
+![Login page](/static/assets/wireframes/sign-up-page.png)
 
 </details>
 
@@ -216,21 +239,49 @@ The wireframes can be seen below:
 <details>
 <summary>Sign up page</summary>
 
-![Sign up page](static/assets/wireframes/register-desktop.png)
+![Sign up page](/static/assets/wireframes/sign-up-page.png)
 
 </details>
 
 <details>
-<summary>Services page</summary>
+<summary>Login page</summary>
 
-![Services page](static/assets/wireframes/services-desktop.png)
+![Login page](/static/assets/wireframes/login-page.png)
 
 </details>
 
 <details>
-<summary>Bookings page</summary>
+<summary>Pricing page</summary>
 
-![Bookings page](static/assets/wireframes/bookings-desktop.png)
+![Pricing page](/static/assets/wireframes/pricing-desktop.png)
+
+</details>
+
+<details>
+<summary>Contact page</summary>
+
+![Contact page](/static/assets/wireframes/contact-desktop.png)
+
+</details>
+
+<details>
+<summary>Book Now page</summary>
+
+![Book Now page](/static/assets/wireframes/book-now-desktop.png)
+
+</details>
+
+<details>
+<summary>My Bookings page</summary>
+
+![My Bookings page](/static/assets/wireframes/my-bookings-desktop.png)
+
+</details>
+
+<details>
+<summary>About page</summary>
+
+![About page](/static/assets/wireframes/about-desktop.png)
 
 </details>
 <br />
