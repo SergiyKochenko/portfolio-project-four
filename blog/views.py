@@ -107,13 +107,6 @@ def contact_page(request):
     return render(request, "contact.html")
 
 
-def contact_page(request):
-    """
-    This view renders to the user the about page.
-    """
-    return render(request, "contact.html")
-
-
 def booknow(request):
     """The view for the booking page. If user is logged in it renders the
     booknow.html, otherwise it redirects user to the login page or signup page.
