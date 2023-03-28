@@ -193,36 +193,57 @@ The wireframes can be seen below:
 <details>
 <summary>Home page</summary>
 
-![Home page](static/assets/wireframes/home-mobile.png)
+![Home page](/static/assets/wireframes/home-modile.png)
 
 </details>
+
 
 <details>
 <summary>Sign up page</summary>
 
-![Sign up page](/static/assets/wireframes/sign-up-page.png)
+![Sign up page](/static/assets/wireframes/sign-up-mobile.png)
 
 </details>
 
 <details>
 <summary>Login page</summary>
 
-![Login page](/static/assets/wireframes/sign-up-page.png)
+![Login page](/static/assets/wireframes/login-mobile.png)
 
 </details>
 
 <details>
-<summary>Services page</summary>
+<summary>Pricing page</summary>
 
-![Services page](static/assets/wireframes/services-mobile.png)
+![Pricing page](/static/assets/wireframes/pricing-mobile.png)
 
 </details>
 
+<details>
+<summary>Contact page</summary>
+
+![Contact page](/static/assets/wireframes/contact-mobile.png)
+
+</details>
 
 <details>
-<summary>Bookings page</summary>
+<summary>Book Now page</summary>
 
-![Bookings page](static/assets/wireframes/bookings-mobile.png)
+![Book Now page](/static/assets/wireframes/booknow-mobile.png)
+
+</details>
+
+<details>
+<summary>My Bookings page</summary>
+
+![My Bookings page](/static/assets/wireframes/my-bookings-mobile.png)
+
+</details>
+
+<details>
+<summary>About page</summary>
+
+![About page](/static/assets/wireframes/about-mobile.png)
 
 </details>
 
@@ -295,79 +316,119 @@ The wireframes can be seen below:
 The navigation bar is present on all pages of the site. The navigation bar changes depending on whether the user is a guest or an authorized visitor.
 Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
 
-Navigation bar for an unauthorized user.
+Navigation bar for an unauthorized user:
+<details>
 
 ![Main navigation](/static/assets/features/navbar.png)
 
-Navigation bar for an authorized user, menu items My Bookings and Logout are available.
+</details>
+
+Navigation bar for an authorized user, menu items My Bookings and Logout are available:
+<details>
+
 ![Authenticated user's Navigation](/static/assets/features/logged-navbar.png)
+
+</details>
 
 ### Home page
 
-On the Home page a user can create an account or Login from the menu. 
+On the Home page a user can create an account or Login from the menu:
+<details>
+
 ![Home page](/static/assets/features/home.png)
+
+</details>
 
 ### Sign up page
 
-To create an account user should fill in form provided on Sign up page.
+To create an account user should fill in form provided on Sign up page:
+<details>
+
 ![Sign up page](/static/assets/features/signup.png)
+
+</details>
 
 
 ### Login page
 
-To login the user should enter credential data that was used during sign up process.
+To login the user should enter credential data that was used during sign up process:
+<details>
 
 ![Sign in page](/static/assets/features/login.png)
 
+</details>
 
-## Pricing page
+### Pricing page
 
-The Pricing page provides information about all available Aquarium House services. User also can book necessary service straight from the Pricing page by clicking on the services price.
+The Pricing page provides information about all available Aquarium House services. User also can book necessary service straight from the Pricing page by clicking on the services price:
+<details>
+
 ![Sign up page](/static/assets/features/pricing.png)
 
-#### Book Now page for the logged user
+</details>
 
-Users must be logged in to make a booking. To book a service, the user must fill in the required fields in the form: name, services, date, time and an optional email,  phone fields.
+### Book Now page for the logged user
+
+Users must be logged in to make a booking. To book a service, the user must fill in the required fields in the form: name, services, date, time and an optional email,  phone fields:
+<details>
 
 ![Book Now page message](/static/assets/features/booknow.png)
 
+</details>
 
-If the user is not authenticated then the user will be shown a message that the user has to sign up or login.
+If the user is not authenticated then the user will be shown a message that the user has to sign up or login:
+<details>
+
 ![Book Now page message](/static/assets/features/booknow-msg.png)
 
+</details>
 
-## My Bookings page
+### My Bookings page
 
-The Booking page is available only to authorized users. The booking page displays the following data: order ID, date, time, service name and cost of the booked service.
+The Booking page is available only to authorized users. The booking page displays the following data: order ID, date, time, service name and cost of the booked service:
+<details>
 
 ![Booking page](/static/assets/features/mybookings.png)
 
-If the user has not yet booked any services, then the user will be shown a message that the user has no bookings at the moment and there is an opportunity  to make a booking.
+</details>
+
+If the user has not yet booked any services, then the user will be shown a message that the user has no bookings at the moment and there is an opportunity  to make a booking:
+<details>
 
 ![Booking page message](/static/assets/features/mybookings-msg.png)
 
+</details>
 
-## Change booking page
+
+### Change booking page
 
 Each booking can be changed or deleted. The user must be authenticated in order to access the change user's bookings.
-The change booking page can be accessed for a specific booking. The page Change booking contains an auto-filled booking form. The user can change the fields at his discretion, or go back to bookings page by clicking the button "Back to my bookings".
+The change booking page can be accessed for a specific booking. The page Change booking contains an auto-filled booking form. The user can change the fields at his discretion, or go back to bookings page by clicking the button "Back to my bookings":
+<details>
 
 ![Booking page message](/static/assets/features/change-booking.png)
 
+</details>
 
-## Delete page
+
+### Delete page
 
 The User must be authenticated to delete the booking. The Delete booking page provides two buttons: 'Yes, delete booking' and 'Back to my bookings' if the user changes his mind. 
-Deletion will delete the only specific booking for the user.
+Deletion will delete the only specific booking for the user:
+<details>
 
 ![Delete booking page](/static/assets/features/delete-booking.png)
 
+</details>
 
-## Logout page
+### Logout page
 
-An authenticated user can logout from account by clicking the Logout button, after which the user will be redirected to the Logout page where the user needs to confirm to logout from account to prevent occasionally log out of user account.
+An authenticated user can logout from account by clicking the Logout button, after which the user will be redirected to the Logout page where the user needs to confirm to logout from account to prevent occasionally log out of user account:
+<details>
 
 ![Logout page](/static/assets/features/logout.png)
+
+</details>
 
 
 ### Responsive design
@@ -456,7 +517,17 @@ Menu on mobile devices is positioned incorrectly | - | fixed CSS style   | fixed
 <br/>
 
 #### Unresolved Bugs
-No known bugs remaining
+One bug known unresolved remaining
+See bug report: [bug report one](https://github.com/users/SergiyKochenko/projects/6)
+<details>
+<summary>Create post page with the same title</summary>
+
+![Create post page](/static/assets/bugs/create-post2.png)
+
+![Create post page](/static/assets/bugs/create-post1.png)
+
+</details>
+
 
 
 [Back to the top](#table-of-contents)
@@ -510,6 +581,7 @@ The available functionality and user experience is reflected in the table below.
 | User can see the Delete post  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
 | User can see the  Update post  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
 | User can see the  attach image  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can like post and unlike  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
 | |
 
 <br/>
