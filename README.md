@@ -316,6 +316,8 @@ The wireframes can be seen below:
 The navigation bar is present on all pages of the site. The navigation bar changes depending on whether the user is a guest or an authorized visitor.
 Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
 
+---
+
 Navigation bar for an unauthorized user:
 <details>
 
@@ -323,12 +325,15 @@ Navigation bar for an unauthorized user:
 
 </details>
 
+---
 Navigation bar for an authorized user, menu items My Bookings and Logout are available:
 <details>
 
 ![Authenticated user's Navigation](/static/assets/features/logged-navbar.png)
 
 </details>
+
+---
 
 ### Home page
 
@@ -339,6 +344,8 @@ On the Home page a user can create an account or Login from the menu:
 
 </details>
 
+---
+
 ### Sign up page
 
 To create an account user should fill in form provided on Sign up page:
@@ -347,6 +354,8 @@ To create an account user should fill in form provided on Sign up page:
 ![Sign up page](/static/assets/features/signup.png)
 
 </details>
+
+---
 
 
 ### Login page
@@ -358,6 +367,8 @@ To login the user should enter credential data that was used during sign up proc
 
 </details>
 
+---
+
 ### Pricing page
 
 The Pricing page provides information about all available Aquarium House services. User also can book necessary service straight from the Pricing page by clicking on the services price:
@@ -366,6 +377,8 @@ The Pricing page provides information about all available Aquarium House service
 ![Sign up page](/static/assets/features/pricing.png)
 
 </details>
+
+---
 
 ### Book Now page for the logged user
 
@@ -376,12 +389,16 @@ Users must be logged in to make a booking. To book a service, the user must fill
 
 </details>
 
+---
+
 If the user is not authenticated then the user will be shown a message that the user has to sign up or login:
 <details>
 
 ![Book Now page message](/static/assets/features/booknow-msg.png)
 
 </details>
+
+---
 
 ### My Bookings page
 
@@ -392,12 +409,16 @@ The Booking page is available only to authorized users. The booking page display
 
 </details>
 
+---
+
 If the user has not yet booked any services, then the user will be shown a message that the user has no bookings at the moment and there is an opportunity  to make a booking:
 <details>
 
 ![Booking page message](/static/assets/features/mybookings-msg.png)
 
 </details>
+
+---
 
 
 ### Change booking page
@@ -410,6 +431,8 @@ The change booking page can be accessed for a specific booking. The page Change 
 
 </details>
 
+---
+
 
 ### Delete page
 
@@ -421,6 +444,8 @@ Deletion will delete the only specific booking for the user:
 
 </details>
 
+---
+
 ### Logout page
 
 An authenticated user can logout from account by clicking the Logout button, after which the user will be redirected to the Logout page where the user needs to confirm to logout from account to prevent occasionally log out of user account:
@@ -430,11 +455,14 @@ An authenticated user can logout from account by clicking the Logout button, aft
 
 </details>
 
+---
+
 
 ### Responsive design
 The site has been designed to be responsive and adapted for desktop and mobile use.
 The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
 
+---
 
 [Back to the top](#table-of-contents)
 
@@ -477,26 +505,12 @@ The project has been tested using a multi-device emulator with different screen 
 - [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website.
 - [Github Projects and Kanban board](https://github.com/users/SergiyKochenko/projects/6) was used to track the progress of the project in general and of every application in the project.
 - [Free grammar checker](https://www.zoho.com/writer/free-grammar-checker.html)
+- [Free formatter HTML](https://www.freeformatter.com/html-formatter.html#before-output): was used to format HTML5 code for the website.
+- [Free cleancss CSS3](https://www.cleancss.com/css-beautify/): was used to format CSS3 code for the website.
+- [Free black vercel](https://black.vercel.app/): was used to format python code for the website.
 
 [Back to the top](#table-of-contents)
 
-
-
-
-
-
-
-
-
-
-
-
-
-MADE FORMATING HTML WITH: https://www.freeformatter.com/html-formatter.html#before-output
-
-MADE FORMATING CSS WITH: https://www.cleancss.com/css-beautify/
-
-MADE FORMATING PYTHON WITH: https://black.vercel.app/
 
 ## Testing
 
@@ -692,9 +706,49 @@ The Linter reports had messages about exceeding the string length of 79 characte
 ![](/static/assets/validation/pylint/views.png)
 </details>
 
-[Back to the top](#table-of-contents)
+---
+### Lighthouse report
+
+Desktop:
+
+<details><summary>About page</summary>
+
+![](/static/assets/lighthouse/about-desktop.png)
+</details>
+<details><summary>User's Blog page</summary>
+
+![](/static/assets/lighthouse/usersblog-desktop.png)
+</details>
+<details><summary>Pricing page</summary>
+
+![](/static/assets/lighthouse/pricing-desktop.png)
+</details>
+<details><summary>Contact page</summary>
+
+![](/static/assets/lighthouse/contact-desktop.png)
+</details>
+<details><summary>Book Now page</summary>
+
+![](/static/assets/lighthouse/booknow-desktop.png)
+</details>
+<details><summary>My Bookings page</summary>
+
+![](/static/assets/lighthouse/mybookings-desktop.png)
+</details>
+
+Mobile:
+
+<details><summary>forms.py</summary>
+
+![](/static/assets/validation/pylint/forms.png)
+</details>
+
+
 
 ---
+[Back to the top](#table-of-contents)
+
+
 
 ##  Deployment
 
