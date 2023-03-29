@@ -6,6 +6,7 @@
   - [**Wireframes**](#wireframes)
 - [**Features**](#features)
   - [**Responsive Design**](#responsive-design)
+  - [**Database Schema**](#database-schema)
 - [**Technologies**](#technologies)
   - [**Languages**](#languages)
   - [**Frameworks**](#frameworks)
@@ -21,7 +22,7 @@
 
  
 # Portfolio Project 4 - Aquarium House
-![](/static/assets/images/amiresponsive-light.png)
+![](/static/assets/images/amiresponsive.png)
 
 The deployed [Aquarium House](https://app-portfolio-project-four.herokuapp.com/) app.
 
@@ -69,14 +70,23 @@ The GitHub Projects section was used as a [Kanban board](https://github.com/user
 ## Design Structure
 
 The site was based on the Blog template from the CodeInstitute site. The look of the site, color scheme, font, logo and image for the home page were made by myself from the template.
-The main page layout can be seen below:
+The main page layout can be seen below.
 
-Aquerium House website design templates
+Site Navigation:
+
+<details>
+<summary>Diagram </summary>
+
+![Diagram](/static/assets/images/diagram.png)
+</details>
+
+<br>
+Aquerium House website design templates:
 
 <details>
 <summary>About page </summary>
 
-![Home page](/static/assets/images/about-page.png)
+![About page](/static/assets/images/about-page.png)
 </details>
 <details>
 <summary>Home page </summary>
@@ -86,52 +96,52 @@ Aquerium House website design templates
 <details>
 <summary>Pricing page </summary>
 
-![Home page](/static/assets/images/pricing-page.png)
+![Picing page](/static/assets/images/pricing-page.png)
 </details>
 <details>
 <summary>Contact page </summary>
 
-![Home page](/static/assets/images/contact-page.png)
+![Contact page](/static/assets/images/contact-page.png)
 </details>
 <details>
 <summary>Book Now page </summary>
 
-![Home page](/static/assets/images/booknow-page.png)
+![Book Now page](/static/assets/images/booknow-page.png)
 </details>
 <details>
 <summary>My Bookings page </summary>
 
-![Home page](/static/assets/images/bookings-page.png)
+![Bookings page](/static/assets/images/bookings-page.png)
 </details>
 <details>
 <summary>Create Post </summary>
 
-![Home page](/static/assets/images/create-post.png)
+![Create post page](/static/assets/images/create-post.png)
 </details>
 <details>
 <summary>Edit Post </summary>
 
-![Home page](/static/assets/images/edit-post.png)
+![Edit post page](/static/assets/images/edit-post.png)
 </details>
 <details>
 <summary>Delete Post </summary>
 
-![Home page](/static/assets/images/delete-post.png)
+![Delete post page](/static/assets/images/delete-post.png)
 </details>
 <details>
 <summary>Logout page </summary>
 
-![Home page](/static/assets/images/logout-page.png)
+![Logout page](/static/assets/images/logout-page.png)
 </details>
 <details>
 <summary>Login page </summary>
 
-![Home page](/static/assets/images/login-page.png)
+![Login page](/static/assets/images/login-page.png)
 </details>
 <details>
 <summary>Register page </summary>
 
-![Home page](/static/assets/images/signup-page.png)
+![Register page](/static/assets/images/signup-page.png)
 </details>
 <br/>
 
@@ -464,6 +474,15 @@ The project has been tested using a multi-device emulator with different screen 
 
 ---
 
+### Database Schema
+
+<details><summary>Table</summary>
+
+![](/static/assets/images/database-table.png)
+</details>
+
+---
+
 [Back to the top](#table-of-contents)
 
 
@@ -524,9 +543,9 @@ The project has been tested using a multi-device emulator with different screen 
 Menu on mobile devices is positioned incorrectly | - | fixed CSS style   | fixed |
 |Pricing form does not appear on the Pricing page  | - | fixed by passing form object to the pricing.html template , placing form tags in in the proper template pricing.html | fixed |
 | In the Gitpod Environment the site works with full CSS style,  but on Heroku the site  and the admin page (/admin) comes up without CSS styling  | - | Set DEBUG variable to False and remove the DISABLE_COLLECTSTATIC variable | fixed |
-| Function get_min_date isn't defined  | see attached img 3 | fixed by removing function from views.py file and placing function in the forms.py so the form can access that function | fixed  |
+| Function get_min_date isn't defined  | - | fixed by removing function from views.py file and placing function in the forms.py so the form can access that function | fixed  |
 | When an invalid phone number is entered on the Booknow page, the form clears the fields and returns to its original state with no messages to the user. The Change Booking page also returns the form to its original state with pre-filled fields | - | Added regex validation for numeric input and displaying a message to the user | fixed  |
-| Pricing elements on the Pricing page are not displayed correctly on mobile devices | see attached img 4 | added media queries rules for small screen devices  | fixed  |
+| Pricing elements on the Pricing page are not displayed correctly on mobile devices | - | added media queries rules for small screen devices  | fixed  |
 
 <br/>
 
@@ -571,6 +590,7 @@ Testing has been carried out on the  following browsers:
   - Google Chrome
   - Firefox
   - Microsoft Edge
+  - Safari iOS
 
 The site was constantly tested during the process of creating the site in the Gitpod Environment and the deployed site on Heroku was also tested in terms of user experience.
 The available functionality and user experience is reflected in the table below.
@@ -597,6 +617,14 @@ The available functionality and user experience is reflected in the table below.
 | User can see the  attach image  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
 | User can like post and unlike  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
 | |
+
+### Testing CRUD functionality:
+ - Each of the features were tested multiple times to ensure that numerous new posts could be submitted, and that each post had the ability to be updated, edited and delete by the user that submitted it.
+ - If a post is submitted by another user, the edit/delete buttons do not appear on the page.
+ - Each of the features were tested multiple times to ensure that numerous new booking could be submitted, and that each booking had the ability to be updated, edited and delete by the user that submitted it.
+ - If a booking is submitted by another user, the particular ID booking list with edit/delete buttons do not appear on the page.
+
+ 
 
 <br/>
 
@@ -864,5 +892,6 @@ Website template from Aquarium community.
 Kerry Colledge for supporting all our group and for  individual support in all circumstances.
 The tutor support team at Code Institute for their support.
 To my friends who participated in testing my application.
+
 
 [Back to the top](#table-of-contents)
