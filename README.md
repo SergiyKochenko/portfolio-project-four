@@ -62,7 +62,7 @@ As a Site Administrator I would like to be able to create, view, edit and delete
 ### Agile tools
 
 The GitHub Projects section was used as a [Kanban board](https://github.com/users/SergiyKochenko/projects/6) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.
-[User stories](https://github.com/SergiyKochenko/portfolio-project-four/issues) were used to break down the project into sub-tasks and placed on the Kanban board to work on them and track progress.
+[User stories](https://github.com/users/SergiyKochenko/projects/6) were used to break down the project into sub-tasks and placed on the Kanban board to work on them and track progress.
 
 [Back to the top](#table-of-contents)
 
@@ -708,6 +708,7 @@ The Linter reports had messages about exceeding the string length of 79 characte
 
 ---
 ### Lighthouse report
+<br>
 
 Desktop:
 
@@ -735,12 +736,33 @@ Desktop:
 
 ![](/static/assets/lighthouse/mybookings-desktop.png)
 </details>
+<br>
 
 Mobile:
 
-<details><summary>forms.py</summary>
+<details><summary>About page</summary>
 
-![](/static/assets/validation/pylint/forms.png)
+![](/static/assets/lighthouse/about-mobile.png)
+</details>
+<details><summary>User's Blog page</summary>
+
+![](/static/assets/lighthouse/usersblog-mobile.png)
+</details>
+<details><summary>Pricing page</summary>
+
+![](/static/assets/lighthouse/pricing-mobile.png)
+</details>
+<details><summary>Contact page</summary>
+
+![](/static/assets/lighthouse/contact-mobile.png)
+</details>
+<details><summary>Book Now page</summary>
+
+![](/static/assets/lighthouse/booknow-mobile.png)
+</details>
+<details><summary>My Bookings page</summary>
+
+![](/static/assets/lighthouse/mybookings-mobile.png)
 </details>
 
 
