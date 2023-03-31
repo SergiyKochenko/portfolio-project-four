@@ -191,9 +191,17 @@ class TestBookingViews(TestCase):
         """
         slug = self.post.slug
         self.post.likes.add(self.user)
-        response = self.client.post(reverse('blog-delete',
-                                    args=[slug]))
+        response = self.client.post(reverse('blog-delete', args=[slug]))
         self.assertRedirects(response, reverse('usersblog'), status_code=302)
+
+    def test_can_delete_return_post(self):
+        """
+        Test to delete post
+        """
+        slug = self.post.slug
+        self.post.likes.add(self.user)
+        response = self.client.get(reverse('blog-delete', args=[slug]))
+        self.assertEquals(response.status_code, 200)
 
     def test_get_about_page(self):
         response = self.client.get(reverse('about'))
