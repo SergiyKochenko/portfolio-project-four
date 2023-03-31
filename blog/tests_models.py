@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Post, Comment, Service, Booking
+import datetime
 
 
 class TestPostModel(TestCase):
@@ -25,6 +26,17 @@ class TestPostModel(TestCase):
             post=self.post, name="Admin", body="Test comment body"
         )
         self.comment.save()
+        self.service = Service.objects.create(
+            service_name='Visit Exibition Room',
+            price=3,
+        )
+        self.service.save()
+        self.booking = Booking.objects.create(
+            user=self.user,
+            service=self.service,
+            name='John',
+            date=datetime.date(2023, 4, 23)
+        )
 
     def test_post_string_method_returns_title(self):
         """
@@ -41,3 +53,11 @@ class TestPostModel(TestCase):
         self.assertEqual(
             str(comment), f"Comment {comment.body} by {self.user.username}"
         )
+
+    def test_booking__returns(self):
+        """
+        Test to check method return for Model app
+        """
+        booking = self.booking
+        self.assertEqual(str(booking), "John")
+        
