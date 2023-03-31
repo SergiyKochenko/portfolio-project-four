@@ -651,7 +651,15 @@ See bug report: [bug reports](https://github.com/users/SergiyKochenko/projects/6
 
 ![Views test](/static/assets/unit_tests/views.png)
 
-![Views coverage](/static/assets/unit_tests/admin_coverage.png)
+![Views coverage](/static/assets/unit_tests/views_coverage.png)
+
+</details>
+<details>
+<summary>Total tests and coverage</summary>
+
+![Total tests](/static/assets/unit_tests/total_tests.png)
+
+![Total coverage](/static/assets/unit_tests/total_coverage.png)
 
 </details>
 
@@ -962,7 +970,7 @@ The structure and the code of the project was based on two walkthroughs by the C
   * Hello Django - I created CRUD functionalities based on the examples of this walkthrough.
   * From I think  therefore I blog -  I borrowed confirmation messages code and also followed the site deployment steps outlined here. 
 
-Date picker field and minimum date validator taken from [here](https://gist.github.com/stasyao/99376eb0cf0ad3599f9737c421b5210e#part_4).
+Date picker field and minimum date validator learned from [here](https://gist.github.com/stasyao/99376eb0cf0ad3599f9737c421b5210e#part_4).
 
 [Official Django Documentation](https://docs.djangoproject.com/en/4.1/ref/) was researched for code expressions  and code functionalities.
 Django [choices fields](https://docs.djangoproject.com/en/4.1/ref/models/fields/).
@@ -972,7 +980,7 @@ Stack Overflow was used intensively for research into code functionalities and p
 
 ### Content
 
-The site home page is taken from the Aquarium community template. I slightly changed the look of the home page and tried to keep the rest of the pages in the same style.
+The site home page is taken from I think therefore I blog template. I slightly changed the look of the home page and tried to keep the rest of the pages in the same style.
 
 
 ### Media
@@ -987,12 +995,12 @@ Website template from Aquarium community.
 
 ### Acknowledgment
 
- - Kerry Colledge for supporting all our group and for  individual support in all circumstances.
+- Kerry Colledge for supporting all our group and for  individual support in all circumstances.
 - Code Institute (especially the Django blog) which helped me to understand how it all comes together.
 - The tutor support team at Code Institute for their support.
 - To my friends who participated in testing my application.
 - Martina Terlevic (my mentor), for helping me.
- - Class mates for helping me.
+- Class mates for helping me.
 
 
 [Back to the top](#table-of-contents)
