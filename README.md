@@ -18,7 +18,7 @@
   - [**Content**](#content)
   - [**Media**](#media)
   - [**Inspiration**](#inspiration)
-  - [**Acknowledgments**](#acknowledgments)
+  - [**Acknowledgment**](#acknowledgment)
 
  
 # Portfolio Project 4 - Aquarium House
@@ -111,7 +111,17 @@ Aquerium House website design templates:
 <details>
 <summary>My Bookings page </summary>
 
-![Bookings page](/static/assets/images/bookings-page.png)
+![My Bookings page](/static/assets/images/bookings-page.png)
+</details>
+<details>
+<summary>Edit Bookings page </summary>
+
+![Edit Bookings page](/static/assets/images/edit-bookings-page.png)
+</details>
+<details>
+<summary>Delete Bookings page </summary>
+
+![Delete Bookings page](/static/assets/images/delete-bookings-page.png)
 </details>
 <details>
 <summary>Create Post </summary>
@@ -143,6 +153,18 @@ Aquerium House website design templates:
 
 ![Register page](/static/assets/images/signup-page.png)
 </details>
+
+<br/>
+
+### Color Scheme
+
+<details>
+<summary>Color palette generator </summary>
+
+![Register page](/static/assets/images/color-palette-generator.png)
+</details>
+
+
 <br/>
 
 ### Functional Structure
@@ -494,6 +516,33 @@ The project has been tested using a multi-device emulator with different screen 
   - HTML5
   - CSS3
 
+Installed Packages:
+---
+Package        &        Version
+- vasgiref                3.6.0
+- cloudinary             1.32.0
+- coverage               7.2.2
+- crispy-bootstrap5      0.7
+- DateTime               5.0
+- dj-database-url        0.5.0
+- dj3-cloudinary-storage 0.0.6
+- Django                 3.2.18
+- django-allauth         0.52.0
+- django-crispy-forms    1.14.0
+- django-summernote      0.8.20.0
+- gunicorn               20.1.0
+- oauthlib               3.2.2
+- pip                    23.0.1
+- psycopg2               2.9.5
+- PyJWT                  2.6.0
+- python-dateutil        2.8.2
+- python3-openid         3.2.0
+- pytz                   2022.7.1
+- requests-oauthlib      1.3.1
+- six                    1.16.0
+- sqlparse               0.4.3
+- zope.interface         5.5.2
+
 ### Frameworks
 
   - [Django](https://www.djangoproject.com/): python framework used to create all the backend 
@@ -512,6 +561,7 @@ The project has been tested using a multi-device emulator with different screen 
 - [GitHub:](https://github.com/) Was used as a version control system to manage the code
 - [Figma:](https://www.figma.com/) Was used to create wireframes
 - [TinyPNG:](https://www.figma.com/) Was used to reduce the size and weight of images and optimizing interaction with the site 
+- [Color Palette Generator:](https://mybrandnewlogo.com/color-palette-generator) Was used to select colors of the web site.
 - [Am I Responsive](http://ami.responsivedesign.is/) to generate an image showcasing the website's responsiveness to different screen sizes 
 - [Pip3](https://pypi.org/project/pip/): is the package manager to install Python modules and libraries.
 - [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Requests for Python to understand.
@@ -549,11 +599,17 @@ Menu on mobile devices is positioned incorrectly | - | fixed CSS style   | fixed
 
 <br/>
 
-#### Unresolved Bugs
+### Bug reports [bug reports](https://github.com/users/SergiyKochenko/projects/6)
+
+<br/>
+
+#### Unresolved Bugs:
 One bug known unresolved remaining
-See bug report: [bug report one](https://github.com/users/SergiyKochenko/projects/6)
+See bug report: [bug reports](https://github.com/users/SergiyKochenko/projects/6)
 <details>
 <summary>Create post page with the same title</summary>
+
+![Create post page](/static/assets/bugs/create-post.png)
 
 ![Create post page](/static/assets/bugs/create-post2.png)
 
@@ -566,7 +622,25 @@ See bug report: [bug report one](https://github.com/users/SergiyKochenko/project
 [Back to the top](#table-of-contents)
 
 ---
-### Manual Testing
+
+## Automated testing (Unit test)
+
+-I have tested the views.py as experiment with automated testing. In the future I plan to have automated testing for the whole app.
+
+<details>
+<summary>Unit tests</summary>
+
+![Create post page](/static/assets/bugs/create-post.png)
+
+![Create post page](/static/assets/bugs/create-post2.png)
+
+![Create post page](/static/assets/bugs/create-post1.png)
+
+</details>
+
+---
+
+## Manual Testing
 
 #### Device Testing
 
@@ -616,6 +690,9 @@ The available functionality and user experience is reflected in the table below.
 | User can see the  Update post  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
 | User can see the  attach image  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
 | User can like post and unlike  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| Admin can create service, edit and delete from admin site  |  &cross; | &check;  |Pass  | This page is available only for authorized admin |
+| Admin can create post, update and delete from admin panel  |  &cross; | &check;  |Pass  | This page is available only for authorized admin |
+| Admin can approve or delete comments from admin panel  |  &cross; | &check;  |Pass  | This page is available only for authorized admin |
 | |
 
 ### Testing CRUD functionality:
@@ -879,7 +956,7 @@ The site home page is taken from the Aquarium community template. I slightly cha
 
 ### Media
 
-Images were all open source and free to use from my owen collections, as I am aquarist my self.
+Images were all open source and free to use from my owen collections, as I am aquarist my self and all the immages from my own aquarium :-)
 
 
 ### Inspiration
@@ -887,11 +964,14 @@ Images were all open source and free to use from my owen collections, as I am aq
 This project was inspired by the Hello Django project and the I Think Therefore I Blog project.
 Website template from Aquarium community. 
 
-### Acknowledgments
+### Acknowledgment
 
-Kerry Colledge for supporting all our group and for  individual support in all circumstances.
-The tutor support team at Code Institute for their support.
-To my friends who participated in testing my application.
+ - Kerry Colledge for supporting all our group and for  individual support in all circumstances.
+- Code Institute (especially the Django blog) which helped me to understand how it all comes together.
+- The tutor support team at Code Institute for their support.
+- To my friends who participated in testing my application.
+- Martina Terlevic (my mentor), for helping me.
+ - Class mates for helping me.
 
 
 [Back to the top](#table-of-contents)

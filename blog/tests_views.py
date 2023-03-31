@@ -262,10 +262,3 @@ class TestUsersBlogViews(TestCase):
                 'liked': 'test'
             })
         self.assertEquals(response.status_code, 200)
-
-
-    # def test_PostLike(self):
-    #     id = self.user.id
-    #     response = self.client.get(reverse('usersblog', args=[id]))
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'usersblog.html')
