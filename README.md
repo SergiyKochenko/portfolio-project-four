@@ -12,6 +12,9 @@
   - [**Frameworks**](#frameworks)
   - [**Tools**](#tools)
 - [**Testing**](#testing)
+  - [**Unit testing**](#automated-testing-unit-test)
+  - [**Manual testing**](#manual-testing)
+  - [**Validations**](#validations)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
   - [**Code**](#code)
@@ -625,18 +628,36 @@ See bug report: [bug reports](https://github.com/users/SergiyKochenko/projects/6
 
 ## Automated testing (Unit test)
 
--I have tested the views.py as experiment with automated testing. In the future I plan to have automated testing for the whole app.
-
+- I have tested my web site, as experiment with automated testing. Currently I have covered 97% in total. In the future I plan to have automated testing for the whole app.
+- See below the attached screen shots of the unit tests:
 <details>
-<summary>Unit tests</summary>
+<summary>tests_admin.py</summary>
 
-![Create post page](/static/assets/bugs/create-post.png)
+![Admin test](/static/assets/unit_tests/admin.png)
 
-![Create post page](/static/assets/bugs/create-post2.png)
-
-![Create post page](/static/assets/bugs/create-post1.png)
+![Admin coverage](/static/assets/unit_tests/admin_coverage.png)
 
 </details>
+<details>
+<summary>tests_models.py</summary>
+
+![Models test](/static/assets/unit_tests/models.png)
+
+![Models coverage](/static/assets/unit_tests/admin_coverage.png)
+
+</details>
+<details>
+<summary>tests_views.py</summary>
+
+![Views test](/static/assets/unit_tests/views.png)
+
+![Views coverage](/static/assets/unit_tests/admin_coverage.png)
+
+</details>
+
+<br/>
+
+[Back to the top](#table-of-contents)
 
 ---
 
@@ -707,7 +728,7 @@ The available functionality and user experience is reflected in the table below.
 
 [Back to the top](#table-of-contents)
 
-## Validation
+## Validations
 
 ### HTML Validation:
 

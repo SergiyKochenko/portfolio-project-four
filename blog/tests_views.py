@@ -72,6 +72,26 @@ class TestBookingViews(TestCase):
         self.booking.refresh_from_db()
         self.assertEquals(self.booking.time, '11:00')
 
+    def test_can_edit_return_booking(self):
+        id = self.booking.id
+        response = self.client.post(
+            reverse('change_booking', args=[id]), {
+                'user': self.user,
+                'service': self.service.id,
+                'name': 'test',
+                'email': 'test@g.com',
+                'phone': '+3805554433',
+                'date':  datetime.date(2022, 4, 11),
+                'time': '11:00'
+            })
+        self.assertEquals(response.status_code, 200)
+
+    def test_can_get_edit_booking(self):
+        id = self.booking.id
+        response = self.client.get(reverse('change_booking', args=[id]))
+        self.assertEquals(response.status_code, 200)
+
+
     def test_get_delete_booking_page(self):
         id = self.booking.id
         response = self.client.get(reverse('delete_booking', args=[id]))
@@ -140,6 +160,7 @@ class TestBookingViews(TestCase):
         Test to edit post
         """
         slug = self.post.slug
+        self.post.likes.add(self.user)
         response = self.client.post(
             reverse('blog-edit', args=[slug]), {
                         'title': "Edited Post Test",
@@ -153,11 +174,23 @@ class TestBookingViews(TestCase):
         self.post.refresh_from_db()
         self.assertEquals(self.post.title, 'Edited Post Test')
 
+    def test_can_edit_return_post(self):
+        """
+        Test to edit post
+        """
+        slug = self.post.slug
+        self.post.likes.add(self.user)
+        response = self.client.get(reverse('blog-edit', args=[slug]))
+        self.assertEquals(response.status_code, 200)
+
+
+
     def test_can_delete_post(self):
         """
         Test to delete post
         """
         slug = self.post.slug
+        self.post.likes.add(self.user)
         response = self.client.post(reverse('blog-delete',
                                     args=[slug]))
         self.assertRedirects(response, reverse('usersblog'), status_code=302)
@@ -190,9 +223,24 @@ class TestBlogViews(TestCase):
             author=self.user
         )
         self.post.save()
+
     def test_open_post_detail(self):
+        """
+        test open post detail page
+        """
         slug = self.post.slug
+        self.post.likes.add(self.user)
         response = self.client.get(reverse('post_detail', args=[slug]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'post_detail.html')
+
+    def test_post_post(self):
+        """
+        test post method for blog page
+        """
+        slug = self.post.slug
+        self.post.likes.add(self.user)
+        response = self.client.post(reverse('post_detail', args=[slug]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'post_detail.html')
 
@@ -216,13 +264,12 @@ class TestUsersBlogViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'usersblog_detail.html')
 
-
-
     def test_can_comment(self):
         """
         Test for comment functionality
         """
         slug = self.post.slug
+        self.post.likes.add(self.user)
         response = self.client.post(
             reverse('post_detail', args=[slug]), {
                 'body': 'test comment'
@@ -234,6 +281,7 @@ class TestUsersBlogViews(TestCase):
         Test for comment functionality
         """
         slug = self.post.slug
+        self.post.likes.add(self.user)
         response = self.client.post(
             reverse('usersblog_detail', args=[slug]), {
                 'body': 'test comment'
@@ -245,6 +293,7 @@ class TestUsersBlogViews(TestCase):
         Test for likes functionality
         """
         slug = self.post.slug
+        self.post.likes.add(self.user)
         response = self.client.post(
             reverse('post_detail', args=[slug]), {
                 'liked': 'test'
@@ -257,8 +306,38 @@ class TestUsersBlogViews(TestCase):
         Test for likes functionality
         """
         slug = self.post.slug
+        self.post.likes.add(self.user)
         response = self.client.post(
             reverse('usersblog_detail', args=[slug]), {
                 'liked': 'test'
             })
         self.assertEquals(response.status_code, 200)
+
+    def test_can_like(self):
+        """
+        test for like functionality
+        """
+        slug = self.post.slug
+        response = self.client.post(
+            reverse('post_like', args=[slug]), {
+            })
+        self.assertEquals(response.status_code, 302)
+
+    def test_can_remove_like(self):
+        """
+        test for remove like
+        """
+        slug = self.post.slug
+        self.post.likes.add(self.user)
+        response = self.client.post(
+            reverse('post_like', args=[slug]), {
+            })
+        self.assertEquals(response.status_code, 302)
+
+    def test_unauthorized_redirect(self):
+        """
+        test for redirect user
+        """
+        self.client.logout()
+        response = self.client.get(reverse('bookings'))
+        self.assertEqual(response.status_code, 302)
