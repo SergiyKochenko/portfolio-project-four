@@ -1,9 +1,16 @@
-from django.test import TestCase
+from django.test import Client, TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Service, Booking, Post
+from blog.models import Booking
+from blog.forms import BookingForm
+from blog.forms import CreatePostForm
+
 import datetime
 import tempfile
+import unittest
+import datetime
+
 
 
 class TestBookingViews(TestCase):
@@ -342,10 +349,69 @@ class TestUsersBlogViews(TestCase):
             })
         self.assertEquals(response.status_code, 302)
 
-    def test_unauthorized_redirect(self):
+    def test_create_post_invalid_form(self):
         """
-        test for redirect user
+        Test that a new blog post cannot be created with invalid form data
         """
-        self.client.logout()
-        response = self.client.get(reverse('bookings'))
-        self.assertEqual(response.status_code, 302)
+        user = User.objects.create_user(username="testuser", password="testpass")
+        self.client.login(username="testuser", password="testpass")
+        data = {}
+        response = self.client.post(reverse("create-post"), data=data)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "This field is required.")
+        self.assertFalse(Post.objects.filter(author=user).exists())
+
+    def test_booknow_view_with_invalid_data(self):
+        self.client.login(username="testuser", password="testpass")
+        response = self.client.get("/booknow/")
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "booknow.html")
+
+        data = {
+            "date": "2023-04-02",
+            "time": "10:00",
+            "name": "",
+            "email": "test@example.com",
+        }
+        response = self.client.post("/booknow/", data)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Please enter correct data")
+        self.assertFalse(
+            Booking.objects.filter(date=datetime.date(2023, 4, 2), time=datetime.time(10, 0), user=self.user).exists()
+        )
+
+class CreatePostViewTest(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', password='testpass')
+        self.url = reverse('create-post')
+
+    def test_create_post_with_valid_data(self):
+        self.client.login(username='testuser', password='testpass')
+        data = {'title': 'Test post', 'content': 'Lorem ipsum dolor sit amet.'}
+        response = self.client.post(self.url, data=data)
+        self.assertEqual(response.status_code, 302) # should redirect to "usersblog"
+
+    def test_create_post_with_invalid_data(self):
+        self.client.login(username='testuser', password='testpass')
+        data = {'title': '', 'content': ''}
+        response = self.client.post(self.url, data=data)
+        self.assertEqual(response.status_code, 200) # should return to the same page
+        form = response.context['form']
+        self.assertTrue(form.errors) # should have validation errors
+
+    def test_create_post_without_login(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 302) # should redirect to login page
+
+    def test_create_post_with_get_request(self):
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200) # should return the form page
+        form = response.context['form']
+        self.assertIsInstance(form, CreatePostForm) # should have a CreatePostForm instance in the context
+
+
+# ============================================
+  
+
+
