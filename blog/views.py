@@ -253,3 +253,6 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse("post_detail", args=[slug]))
+
+def handler404(request, exception):
+    return render(request, '404.html', locals())

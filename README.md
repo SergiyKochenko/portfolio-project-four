@@ -97,6 +97,11 @@ Aquerium House website design templates:
 ![Home page](/static/assets/images/home-page.png)
 </details>
 <details>
+<summary>Post detail page </summary>
+
+![Post detail page](/static/assets/images/post-detail-page.png)
+</details>
+<details>
 <summary>Pricing page </summary>
 
 ![Picing page](/static/assets/images/pricing-page.png)
@@ -178,6 +183,8 @@ Registration and login are also available from the navigation bar.
 **Create post page:** The create post page is only available to authenticated users.
 The user is asked to fill out a form with the required fields - title, content, image, and an optional field - excerpt.
 After filling out the form, the user is to submit button and than user will be redirected to the page of current user's blog.
+
+**Post detail page:** The post detail page is accessed by clicking on a link thumbnail that represents the post on a website's homepage. Once on the post detail page, users can read the full text of the article and interact with associated media, such as images, likes and comments.
 
 **Edit post page:** This page is available only to authenticated users and has the same functionality and form as the create post page, where users can update post details.
 
@@ -376,6 +383,17 @@ On the Home page a user can create an account or Login from the menu:
 <details>
 
 ![Home page](/static/assets/features/home.png)
+
+</details>
+
+---
+
+### Detail post page
+
+In the Home page a user can create an post and view the post details:
+<details>
+
+![Detail post page](/static/assets/features/post-detail-page.png)
 
 </details>
 
