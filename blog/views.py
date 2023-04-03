@@ -143,8 +143,6 @@ def bookings(request):
         bookings = Booking.objects.filter(user=request.user)
         context = {"bookings": bookings}
         return render(request, "bookings.html", context)
-    else:
-        return redirect("../accounts/signup")
 
 
 @login_required()

@@ -628,7 +628,7 @@ See bug report: [bug reports](https://github.com/users/SergiyKochenko/projects/6
 
 ## Automated testing (Unit test)
 
-- I have tested my web site, as experiment with automated testing. Currently I have covered 97% in total. In the future I plan to have automated testing for the whole app.
+- I have tested my web site, as experiment with automated testing. Currently I have covered 100% in total.
 - See below the attached screen shots of the unit tests:
 <details>
 <summary>tests_admin.py</summary>
@@ -655,7 +655,7 @@ See bug report: [bug reports](https://github.com/users/SergiyKochenko/projects/6
 
 </details>
 <details>
-<summary>Total tests and coverage</summary>
+<summary>Total test and coverage</summary>
 
 ![Total tests](/static/assets/unit_tests/total_tests.png)
 

@@ -27,15 +27,15 @@ class TestPostModel(TestCase):
         )
         self.comment.save()
         self.service = Service.objects.create(
-            service_name='Visit Exibition Room',
+            service_name="Visit Exibition Room",
             price=3,
         )
         self.service.save()
         self.booking = Booking.objects.create(
             user=self.user,
             service=self.service,
-            name='John',
-            date=datetime.date(2023, 4, 23)
+            name="John",
+            date=datetime.date(2023, 4, 23),
         )
 
     def test_post_string_method_returns_title(self):
@@ -60,4 +60,3 @@ class TestPostModel(TestCase):
         """
         booking = self.booking
         self.assertEqual(str(booking), "John")
-        
