@@ -223,6 +223,28 @@ Registration and login are also available from the navigation bar.
 
 **Footer** The footer contains logo, navbar, contact information, social media icons, copyright.
 
+**404 page** 
+- A 404 error indicates that the webpage you're trying to reach can't be found.
+
+- You might see a 404 error because of a problem with the website, because the page was moved or deleted, or because you typed the URL wrong.
+
+- 404 errors are less common today than they used to be, as websites now strive to automatically redirect visitors away from deleted pages.
+
+- There are several ways you can try to resolve 404 errors on your own site or other sites.
+
+**403 page** 
+- A 403 Forbidden Error occurs when a web server forbids you from accessing the page you’re trying to open in your browser. Most of the time, there’s not much you can do. But sometimes, the problem might be on your end. Here are some things you can try.
+
+- The 403 Forbidden Error happens when the web page (or another resource) that you’re trying to open in your web browser is a resource that you’re not allowed to access. It’s called a 403 error because that’s the HTTP status code that the webserver uses to describe that kind of error.
+
+- You usually get this error for one of two reasons. The first is that the owners of the webserver have properly set up access permissions and that you’re really not allowed access to the resource. The second reason is that the owners of the webserver have improperly set up permissions and you’re getting denied access when you really shouldn’t be.
+
+- A 403 Forbidden Error occurs when you do not have permission to access a web page or something else on a web server. It's usually a problem with the website itself. However, you can try refreshing the page, clearing your cache and cookies, and disconnecting from any VPN you might be using.
+
+**500 page** 
+- 500 (internal server error)
+Either your server is down, or your code is so f*cked that it crashed the entire app. I’d recommend you call your developer immediately, relaunch the app, or restart the server.
+
 [Back to the top](#table-of-contents)
 
 ### Wireframes
