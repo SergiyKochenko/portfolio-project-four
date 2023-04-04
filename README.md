@@ -191,9 +191,7 @@ After filling out the form, the user is to submit button and than user will be r
 **Delete post page:** This page is only available to authenticated users and has the same functionality and form as the create, update post page, where the user can update the post details. The user has the ability to delete user's post by selecting the Delete button on the post page. After that, user will be redirected to the delete page where user needs to confirm user's intention. After successfully deleting the post, user will return to the user's blog page and receives a message at the top of the screen.
 Also, if the user changes user's mind, user can return to the page by clicking on the go Back button.
 
-**Pricing page**
-
-The Pricing page provides information about all available Aquarium House services. User also can book necessary service straight from the Pricing page by clicking on the services price and the user will be redirected to creat booking form.
+**Pricing page:** The Pricing page provides information about all available Aquarium House services. User also can book necessary service straight from the Pricing page by clicking on the services price and the user will be redirected to creat booking form.
 
 **Registration page:** The user must create an account to make a reservation, or create post.
 To do this, user is asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
